@@ -12,6 +12,7 @@ body {
 }
 
 section {
+  width: 100%;
   min-width: 600px;
   height: 100vh;
 }
@@ -21,6 +22,7 @@ section {
 }
 
 .banner header {
+  z-index: 10000;
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,11 +30,14 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 40px 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: red;
-  padding: 30px 80px;
+  position: fixed;
+  width: 100%;
 }
 
 .banner header .logo h2 {
@@ -54,21 +59,86 @@ section {
 }
 
 .banner header nav ul li a {
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: white;
   display: block;
   margin: 0 30px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
 }
 
 .banner header nav ul .slider {
+  border-radius: 30px;
   position: absolute;
-  bottom: 0px;
-  left: 0;
   height: 5px;
   width: 120px;
   background: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#00ffd5));
   background: linear-gradient(90deg, #0059ff, #00ffd5);
+  bottom: -20px;
+  left: 0;
+}
+
+.banner .main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.banner .main .text {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+
+.banner .main .text p,
+.banner .main .text h2 {
+  width: 80%;
+  text-align: initial;
+}
+
+.banner .main .text h2 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.banner .main .text h2 span {
+  font-weight: 700;
+  background: -webkit-linear-gradient(45deg, #0059ff, #00ffd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: gradAnim 4s infinite;
+          animation: gradAnim 4s infinite;
+}
+
+.banner .main .text p {
+  font-size: 2rem;
+}
+
+.banner .main .img {
+  width: 50%;
+}
+
+.banner .main .img img {
+  height: 100%;
+  opacity: 0.4;
+  float: right;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

@@ -14,6 +14,7 @@ body {
 }
 
 section {
+    width: 100%;
     min-width: 600px;
     height: 100vh;
 }
@@ -24,12 +25,15 @@ section {
 
 .banner {
     header {
+        z-index: 10000;
         text-transform: uppercase;
         display: flex;
         align-items: center;
+        padding: 40px 80px;
+        box-sizing: border-box;
         justify-content: space-between;
-        background: red;
-        padding: 30px 80px;
+        position: fixed;
+        width: 100%;
         .logo {
             h2 {
                 font-weight: 900;
@@ -42,22 +46,66 @@ section {
                 li {
                     list-style: none;
                     a {
-                        font-size: 1.2rem;
-                        font-weight: 500;
-                        text-decoration: none;
-                        color: white;
                         display: block;
                         margin: 0 30px;
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        color: white;
+                        text-decoration: none;
                     }
                 }
-                .slider{
+                .slider {
+                    border-radius: 30px;
                     position: absolute;
-                    bottom: 0px;
-                    left: 0;
                     height: 5px;
                     width: 120px;
                     background: $gradient;
+                    bottom: -20px;
+                    left: 0;
                 }
+            }
+        }
+    }
+    .main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        .text {
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            width: 50%;
+            p,
+            h2 {
+                width: 80%;
+                text-align: initial;
+            }
+            h2 {
+                font-size: 5rem;
+                font-weight: 500;
+                span {
+                    font-weight: 700;
+                    background: -webkit-linear-gradient(45deg, rgb(0, 89, 255), rgb(0, 255, 213));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: gradAnim 4s infinite;
+                }
+            }
+            p{
+                font-size: 2rem;
+            }
+        }
+        .img {
+            width: 50%;
+            img {
+                height: 100%;
+                opacity: 0.4;
+                float: right;
+                object-fit: cover;
             }
         }
     }
