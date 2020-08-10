@@ -95,7 +95,7 @@ section {
                     animation: gradAnim 4s infinite;
                 }
             }
-            p{
+            p {
                 font-size: 2rem;
             }
         }
@@ -123,16 +123,31 @@ section {
 .footer {
 }
 
-@media (max-width: 991px){
-    body{
+@media (max-width: 991px) {
+    body {
         width: 100vw;
     }
 
-    .banner header{
-        padding: 20px 40px;
+    .banner {
+        header {
+            h2 {
+                font-size: 1.7rem;
+            }
+            padding: 20px 40px;
+        }
+        .main {
+            .text {
+                h2 {
+                    font-size: 3rem;
+                }
+                p{
+                    font-size: 1.7rem;
+                }
+            }
+        }
     }
 
-    nav{
+    nav {
         display: none;
     }
 }

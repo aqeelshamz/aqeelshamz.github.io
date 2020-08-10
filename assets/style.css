@@ -149,6 +149,15 @@ section {
   .banner header {
     padding: 20px 40px;
   }
+  .banner header h2 {
+    font-size: 1.7rem;
+  }
+  .banner .main .text h2 {
+    font-size: 3rem;
+  }
+  .banner .main .text p {
+    font-size: 1.7rem;
+  }
   nav {
     display: none;
   }
