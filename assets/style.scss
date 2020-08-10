@@ -122,3 +122,17 @@ section {
 
 .footer {
 }
+
+@media (max-width: 991px){
+    body{
+        width: 100vw;
+    }
+
+    .banner header{
+        padding: 20px 40px;
+    }
+
+    nav{
+        display: none;
+    }
+}

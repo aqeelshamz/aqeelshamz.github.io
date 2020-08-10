@@ -141,4 +141,16 @@ section {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+@media (max-width: 991px) {
+  body {
+    width: 100vw;
+  }
+  .banner header {
+    padding: 20px 40px;
+  }
+  nav {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
