@@ -6,6 +6,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -207,6 +211,10 @@ section {
   height: 100%;
 }
 
+.about .container .skills .title h2 {
+  font-size: 2rem;
+}
+
 .about .container .skills .skill-list .progress-bar {
   margin-top: 20px;
   height: 80px;
@@ -218,6 +226,10 @@ section {
 .about .container .skills .skill-list .progress-bar .title {
   width: 250px;
   height: 30px;
+}
+
+.about .container .skills .skill-list .progress-bar .title p {
+  font-size: 1.2rem;
 }
 
 .about .container .skills .skill-list .progress-bar .progress-back {
@@ -233,6 +245,68 @@ section {
   background: linear-gradient(90deg, #0059ff, #00ffd5);
   width: 50%;
   height: 100%;
+}
+
+.services {
+  background: white;
+  padding: 200px 50px;
+}
+
+.services .container {
+  background: black;
+  color: white;
+  height: 100%;
+  border-radius: 15px;
+  padding: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.services .container .title h2 {
+  font-size: 3rem;
+}
+
+.services .container .card-container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.services .container .card-container .card {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 25%;
+  margin: 10px;
+  height: 300px;
+  background: #333;
+  border-radius: 8px;
+}
+
+.services .container .card-container .card h2 {
+  font-size: 1.2rem;
+}
+
+.services .container .card-container .card p {
+  margin-top: 10px;
+  padding: 0 20px;
+  font-size: 1rem;
+}
+
+.services .container .card-container .card:hover {
+  border-radius: 0;
+  background: linear-gradient(45deg, #0059ff, #00ffd5);
 }
 
 @media (max-width: 1200px) {
@@ -307,6 +381,47 @@ section {
   .about .container .skills .skill-list .progress-bar .title {
     width: 80%;
     text-align: initial;
+  }
+  .about .container .skills .skill-list .progress-bar .title p {
+    font-size: 1rem;
+  }
+  .services {
+    padding: 0;
+  }
+  .services .container {
+    text-align: center;
+    border-radius: 0;
+    background: white;
+    color: black;
+  }
+  .services .container img {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  .services .container .card-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services .container .card-container .card {
+    margin: 0px;
+    padding: 0px;
+    background: white;
+    width: 100%;
+    height: auto;
+  }
+  .services .container .card-container .card:hover {
+    background: transparent;
+  }
+  .services .container .title h2 {
+    font-size: 2rem;
   }
   nav {
     display: none;
