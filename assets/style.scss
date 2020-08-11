@@ -27,8 +27,8 @@ body {
 
 section {
     width: 100%;
-    min-width: 600px;
     height: 100vh;
+    min-width: 600px;
     min-height: 1000px;
 }
 
@@ -59,6 +59,12 @@ section {
                 transition: 0.4s;
                 font-weight: 900;
             }
+        }
+        .menu {
+            display: none;
+            width: 30px;
+            height: 30px;
+            background: url("./menu.svg");
         }
         nav {
             position: relative;
@@ -216,7 +222,7 @@ span {
                 height: 350px;
                 padding: 20px;
                 background: #151515;
-                border-radius: 8px;
+                border-radius: 20px;
                 h2 {
                     font-size: 1.2rem;
                 }
@@ -236,6 +242,7 @@ span {
 
 .contact {
     padding: 150px 50px;
+    min-height: 1050px;
     .container {
         background: #151515;
         height: 100%;
@@ -255,6 +262,7 @@ span {
                     flex-direction: column;
                     input,
                     textarea {
+                        outline: 0;
                         background: transparent;
                         color: white;
                         height: 50px;
@@ -270,6 +278,20 @@ span {
                         height: 200px;
                         resize: none;
                     }
+                    input[type="submit"] {
+                        cursor: pointer;
+                        transition: 0.4s;
+                        background: black;
+                        height: 70px;
+                        border: 0;
+                        border-radius: 20px;
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                    }
+                    input[type="submit"]:hover {
+                        border-radius: 0;
+                        background: linear-gradient(45deg, rgb(0, 89, 255), rgb(0, 255, 213));
+                    }
                 }
             }
             .right {
@@ -278,7 +300,6 @@ span {
                 padding-left: 70px;
                 .card {
                     transition: 0.4s;
-                    cursor: pointer;
                     border-radius: 20px;
                     overflow: hidden;
                     background: black;
@@ -286,6 +307,17 @@ span {
                     padding: 20px 50px;
                     h2 {
                         font-size: 1.3rem;
+                    }
+                    .logos {
+                        img {
+                            transition: 0.2s;
+                            width: 35px;
+                            margin: 15px;
+                        }
+
+                        img:hover {
+                            transform: scale(1.2);
+                        }
                     }
                 }
                 .card:hover {
@@ -303,18 +335,35 @@ span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #000;
-    height: 200px;
+    background: #151515;
+    padding: 75px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
+address {
+    user-select: text;
+}
+
+hr {
+    display: none;
+}
+
 @media (max-width: 1200px) {
+
     body {
         width: 100vw;
+    }
+
+    hr {
+        display: block;
     }
 
     .banner {
@@ -322,6 +371,9 @@ a{
             padding: 20px 80px;
             h2 {
                 font-size: 1.5rem;
+            }
+            .menu{
+                display: block;
             }
         }
         .main {
@@ -358,11 +410,13 @@ a{
                 p {
                     font-size: 1.2rem;
                     width: 100%;
+                    padding: 0 10%;
                 }
             }
             .skills {
                 height: 100%;
                 width: 100%;
+                margin-top: 70px;
                 .title {
                     margin-top: 50px;
                     text-align: center;
@@ -388,6 +442,7 @@ a{
     }
 
     .services {
+        height: 130vh;
         padding: 0;
         .container {
             text-align: center;
@@ -398,11 +453,12 @@ a{
                 filter: invert(1);
             }
             .card-container {
+                margin-top: 0;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
                 .card {
-                    margin: 0px;
+                    margin: 30px;
                     padding: 0px;
                     background: white;
                     width: 100%;
@@ -419,7 +475,7 @@ a{
     }
 
     .contact {
-        height: 130vh;
+        height: 140vh;
         padding: 0;
         .container {
             border-radius: 0;
@@ -431,13 +487,13 @@ a{
                 .right {
                     width: 100%;
                 }
-                *{
+                * {
                     margin: 0;
                 }
-                .left{
+                .left {
                     margin-top: 25px;
                 }
-                .right{
+                .right {
                     margin-top: 25px;
                     padding: 0;
                 }
@@ -447,5 +503,36 @@ a{
 
     nav {
         display: none;
+    }
+
+    .footer {
+        background: #000;
+    }
+
+}
+
+@media (min-width: 2000px) {
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section,
+    header {
+        max-width: 2000px;
+    }
+}
+
+@media (min-height: 1000px) {
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section,
+    header {
+        max-height: 1000px;
     }
 }

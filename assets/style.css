@@ -29,8 +29,8 @@ body {
 
 section {
   width: 100%;
-  min-width: 600px;
   height: 100vh;
+  min-width: 600px;
   min-height: 1000px;
 }
 
@@ -78,6 +78,13 @@ section {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-weight: 900;
+}
+
+.banner header .menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  background: url("./menu.svg");
 }
 
 .banner header nav {
@@ -293,7 +300,7 @@ span {
   height: 350px;
   padding: 20px;
   background: #151515;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .services .container .card-container .card h2 {
@@ -313,6 +320,7 @@ span {
 
 .contact {
   padding: 150px 50px;
+  min-height: 1050px;
 }
 
 .contact .container {
@@ -345,6 +353,7 @@ span {
 
 .contact .container .row .left form input,
 .contact .container .row .left form textarea {
+  outline: 0;
   background: transparent;
   color: white;
   height: 50px;
@@ -378,6 +387,23 @@ span {
   resize: none;
 }
 
+.contact .container .row .left form input[type="submit"] {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background: black;
+  height: 70px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.contact .container .row .left form input[type="submit"]:hover {
+  border-radius: 0;
+  background: linear-gradient(45deg, #0059ff, #00ffd5);
+}
+
 .contact .container .row .right {
   width: 60%;
   padding: 20px;
@@ -387,7 +413,6 @@ span {
 .contact .container .row .right .card {
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  cursor: pointer;
   border-radius: 20px;
   overflow: hidden;
   background: black;
@@ -397,6 +422,18 @@ span {
 
 .contact .container .row .right .card h2 {
   font-size: 1.3rem;
+}
+
+.contact .container .row .right .card .logos img {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 35px;
+  margin: 15px;
+}
+
+.contact .container .row .right .card .logos img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .contact .container .row .right .card:hover {
@@ -419,8 +456,8 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #000;
-  height: 200px;
+  background: #151515;
+  padding: 75px;
 }
 
 a {
@@ -428,15 +465,36 @@ a {
   color: white;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+address {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+hr {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   body {
     width: 100vw;
+  }
+  hr {
+    display: block;
   }
   .banner header {
     padding: 20px 80px;
   }
   .banner header h2 {
     font-size: 1.5rem;
+  }
+  .banner header .menu {
+    display: block;
   }
   .banner .main .img {
     position: absolute;
@@ -474,10 +532,12 @@ a {
   .about .container .text p {
     font-size: 1.2rem;
     width: 100%;
+    padding: 0 10%;
   }
   .about .container .skills {
     height: 100%;
     width: 100%;
+    margin-top: 70px;
   }
   .about .container .skills .title {
     margin-top: 50px;
@@ -505,6 +565,7 @@ a {
     font-size: 1rem;
   }
   .services {
+    height: 130vh;
     padding: 0;
   }
   .services .container {
@@ -518,6 +579,7 @@ a {
             filter: invert(1);
   }
   .services .container .card-container {
+    margin-top: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -530,7 +592,7 @@ a {
             flex-direction: column;
   }
   .services .container .card-container .card {
-    margin: 0px;
+    margin: 30px;
     padding: 0px;
     background: white;
     width: 100%;
@@ -543,7 +605,7 @@ a {
     font-size: 2rem;
   }
   .contact {
-    height: 130vh;
+    height: 140vh;
     padding: 0;
   }
   .contact .container {
@@ -573,6 +635,47 @@ a {
   }
   nav {
     display: none;
+  }
+  .footer {
+    background: #000;
+  }
+}
+
+@media (min-width: 2000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section,
+  header {
+    max-width: 2000px;
+  }
+}
+
+@media (min-height: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section,
+  header {
+    max-height: 1000px;
   }
 }
 /*# sourceMappingURL=style.css.map */
