@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
 $gradient: linear-gradient(90deg, rgb(0, 89, 255), rgb(0, 255, 213));
@@ -25,12 +26,23 @@ section {
     height: 100vh;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .footer {
     height: 10vh;
 }
 
 .banner {
     header {
+        background: black;
         z-index: 10000;
         text-transform: uppercase;
         display: flex;
@@ -121,6 +133,48 @@ section {
 }
 
 .about {
+    padding: 200px 100px;
+    .container {
+        height: 100%;
+        display: flex;
+        .text {
+            width: 50%;
+            height: 100%;
+            h2 {
+                font-size: 3rem;
+            }
+            p {
+                margin-top: 50px;
+                width: 80%;
+                font-size: 1.5rem;
+            }
+        }
+        .skills {
+            width: 50%;
+            height: 100%;
+            .skill-list .progress-bar {
+                margin-top: 20px;
+                height: 80px;
+                align-items: center;
+                .title {
+                    width: 250px;
+                    height: 30px;
+                }
+                .progress-back {
+                    border-radius: 30px;
+                    height: 10px;
+                    width: 80%;
+                    background: gray;
+                }
+                .progress {
+                    border-radius: 30px;
+                    background: $gradient;
+                    width: 50%;
+                    height: 100%;
+                }
+            }
+        }
+    }
 }
 
 .services {
@@ -139,12 +193,13 @@ section {
 
     .banner {
         header {
+            padding: 20px 80px;
             h2 {
                 font-size: 1.5rem;
             }
         }
         .main {
-            .img{
+            .img {
                 position: absolute;
                 height: 100%;
                 right: 0;
@@ -156,8 +211,48 @@ section {
                 h2 {
                     font-size: 3rem;
                 }
-                p{
+                p {
                     font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .about {
+        padding: 100px 50px;
+        .container {
+            flex-direction: column;
+            .text {
+                height: auto;
+                width: 100%;
+                text-align: center;
+                .title h2 {
+                    font-size: 2rem;
+                }
+                p {
+                    font-size: 1.2rem;
+                    width: 100%;
+                }
+            }
+            .skills {
+                height: 100%;
+                width: 100%;
+                .title {
+                    margin-top: 50px;
+                    text-align: center;
+                }
+                .skill-list {
+                    height: auto;
+                    .progress-bar {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 10px;
+                        height: 50px;
+                        .title {
+                            width: 80%;
+                            text-align: initial;
+                        }
+                    }
                 }
             }
         }

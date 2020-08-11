@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -23,11 +25,32 @@ section {
   height: 100vh;
 }
 
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .footer {
   height: 10vh;
 }
 
 .banner header {
+  background: black;
   z-index: 10000;
   text-transform: uppercase;
   display: -webkit-box;
@@ -153,9 +176,71 @@ section {
      object-fit: cover;
 }
 
+.about {
+  padding: 200px 100px;
+}
+
+.about .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about .container .text {
+  width: 50%;
+  height: 100%;
+}
+
+.about .container .text h2 {
+  font-size: 3rem;
+}
+
+.about .container .text p {
+  margin-top: 50px;
+  width: 80%;
+  font-size: 1.5rem;
+}
+
+.about .container .skills {
+  width: 50%;
+  height: 100%;
+}
+
+.about .container .skills .skill-list .progress-bar {
+  margin-top: 20px;
+  height: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .container .skills .skill-list .progress-bar .title {
+  width: 250px;
+  height: 30px;
+}
+
+.about .container .skills .skill-list .progress-bar .progress-back {
+  border-radius: 30px;
+  height: 10px;
+  width: 80%;
+  background: gray;
+}
+
+.about .container .skills .skill-list .progress-bar .progress {
+  border-radius: 30px;
+  background: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#00ffd5));
+  background: linear-gradient(90deg, #0059ff, #00ffd5);
+  width: 50%;
+  height: 100%;
+}
+
 @media (max-width: 1200px) {
   body {
     width: 100vw;
+  }
+  .banner header {
+    padding: 20px 80px;
   }
   .banner header h2 {
     font-size: 1.5rem;
@@ -175,6 +260,53 @@ section {
   }
   .banner .main .text p {
     font-size: 1.5rem;
+  }
+  .about {
+    padding: 100px 50px;
+  }
+  .about .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about .container .text {
+    height: auto;
+    width: 100%;
+    text-align: center;
+  }
+  .about .container .text .title h2 {
+    font-size: 2rem;
+  }
+  .about .container .text p {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  .about .container .skills {
+    height: 100%;
+    width: 100%;
+  }
+  .about .container .skills .title {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .about .container .skills .skill-list {
+    height: auto;
+  }
+  .about .container .skills .skill-list .progress-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 10px;
+    height: 50px;
+  }
+  .about .container .skills .skill-list .progress-bar .title {
+    width: 80%;
+    text-align: initial;
   }
   nav {
     display: none;
