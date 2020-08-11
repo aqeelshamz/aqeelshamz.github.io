@@ -54,8 +54,48 @@ section {
           flex-direction: column;
 }
 
+.menulist {
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  height: 100vh;
+  z-index: 20000;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.menulist ul li {
+  list-style: none;
+  text-align: center;
+  letter-spacing: 5px;
+  margin: 35px;
+  width: 300px;
+}
+
+.menulist ul li a {
+  color: white;
+}
+
+.menulist .close {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 30px;
+  right: 80px;
+  background: url("./close.svg");
+}
+
 .banner header {
-  background: black;
   z-index: 10000;
   text-transform: uppercase;
   display: -webkit-box;
@@ -81,6 +121,7 @@ section {
 }
 
 .banner header .menu {
+  cursor: pointer;
   display: none;
   width: 30px;
   height: 30px;
@@ -111,6 +152,8 @@ section {
 }
 
 .banner header nav ul .slider {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   border-radius: 30px;
   position: absolute;
   height: 5px;
@@ -249,10 +292,12 @@ span {
 }
 
 .about .container .skills .skill-list .progress-bar .progress {
+  -webkit-transition: 1s;
+  transition: 1s;
   border-radius: 30px;
   background: -webkit-gradient(linear, left top, right top, from(#0059ff), to(#00ffd5));
   background: linear-gradient(90deg, #0059ff, #00ffd5);
-  width: 50%;
+  width: 0%;
   height: 100%;
 }
 
@@ -456,7 +501,7 @@ span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #151515;
+  background: #000;
   padding: 75px;
 }
 
@@ -478,6 +523,24 @@ address {
 
 hr {
   display: none;
+}
+
+.h-active {
+  background: black;
+}
+
+.h-active-2 {
+  background: black;
+}
+
+.h-invert {
+  background: white;
+  color: black;
+}
+
+.h-invert nav ul li a, .h-invert .menu {
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 @media (max-width: 1200px) {
@@ -594,7 +657,7 @@ hr {
   .services .container .card-container .card {
     margin: 30px;
     padding: 0px;
-    background: white;
+    background: transparent;
     width: 100%;
     height: auto;
   }
@@ -636,9 +699,6 @@ hr {
   nav {
     display: none;
   }
-  .footer {
-    background: #000;
-  }
 }
 
 @media (min-width: 2000px) {
@@ -657,25 +717,6 @@ hr {
   section,
   header {
     max-width: 2000px;
-  }
-}
-
-@media (min-height: 1000px) {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  section,
-  header {
-    max-height: 1000px;
   }
 }
 /*# sourceMappingURL=style.css.map */

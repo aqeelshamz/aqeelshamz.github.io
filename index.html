@@ -8,9 +8,80 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap"
         rel="stylesheet">
+    <script src="./assets/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(
+            function(){
+                $('.close').click(
+                    function () {
+                        $('.menulist').css("display", "none");
+                    }
+                );
+                $('.menu').click(
+                    function () {
+                        $('.menulist').css("display", "flex");
+                    }
+                );
+                $('.menulist ul li a').click(
+                    function () {
+                        $('.menulist').css("display", "none");
+                    }
+                );
+            }
+        );
+        $(window).on("scroll", function () {
+            //if ($(window).scrollTop() > parseInt($('.banner').css('height'))) {
+            if ($(window).scrollTop() < 200) {
+                $("header").removeClass("h-active h-active-2");
+                $(".slider").css("left", "0px");
+            }
+
+            if ($(window).scrollTop() > 200) {
+                $("header").addClass("h-active");
+                $("header").removeClass("h-active-2 h-invert");
+                $(".slider").css("left", "0px");
+            }
+
+            if ($(window).scrollTop() > parseInt($('.banner').css('height')) - 100) {
+                $("header").addClass("h-active-2");
+                $("header").removeClass("h-active h-invert");
+                $(".slider").css("left", "125px");
+                $('.progress:eq(0)').css("width", "95%");
+                $('.progress:eq(1)').css("width", "80%");
+                $('.progress:eq(2)').css("width", "65%");
+                $('.progress:eq(3)').css("width", "95%");
+                $('.progress:eq(4)').css("width", "60%");
+            }
+
+            if ($(window).scrollTop() > parseInt($('.banner').css('height')) * 2 - 100) {
+                $("header").addClass("h-invert");
+                $("header").removeClass("h-active h-active-2");
+                $(".slider").css("left", "270px");
+            }
+
+            if ($(window).scrollTop() > parseInt($('.banner').css('height')) * 3 - 100) {
+                $("header").addClass("h-active");
+                $("header").removeClass("h-invert h-active-2");
+                $(".slider").css("left", "430px");
+            }
+
+        });
+    </script>
+
 </head>
 
 <body>
+
+    <div class="menulist">
+        <div class="close"></div>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </div>
 
     <section class="banner">
         <header>
@@ -166,8 +237,10 @@
                     <div class="card">
                         <h2>Social Profiles</h2>
                         <div class="logos">
-                            <a href="https://instagram.com/aqeelshamz" target="_blank"><img src="./assets/instagram.svg" alt="Instagram"></a>
-                            <a href="https://twitter.com/aqeelshamz" target="_blank"><img src="./assets/twitter.svg" alt="Twitter"></a>
+                            <a href="https://instagram.com/aqeelshamz" target="_blank"><img src="./assets/instagram.svg"
+                                    alt="Instagram"></a>
+                            <a href="https://twitter.com/aqeelshamz" target="_blank"><img src="./assets/twitter.svg"
+                                    alt="Twitter"></a>
                         </div>
                     </div>
                     <div class="card pointer" onclick="window.open('mailto:aqeelten@gmail.com')">
