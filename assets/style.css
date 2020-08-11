@@ -161,7 +161,9 @@ section {
     font-size: 1.5rem;
   }
   .banner .main .img {
-    width: 100%;
+    position: absolute;
+    height: 100%;
+    right: 0;
   }
   .banner .main .text {
     position: absolute;
