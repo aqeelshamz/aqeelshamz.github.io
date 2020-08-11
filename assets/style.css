@@ -4,6 +4,10 @@
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 html {
@@ -27,6 +31,7 @@ section {
   width: 100%;
   min-width: 600px;
   height: 100vh;
+  min-height: 1000px;
 }
 
 .row {
@@ -47,10 +52,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.footer {
-  height: 10vh;
 }
 
 .banner header {
@@ -154,15 +155,6 @@ section {
   font-weight: 500;
 }
 
-.banner .main .text h2 span {
-  font-weight: 700;
-  background: -webkit-linear-gradient(45deg, #0059ff, #00ffd5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: gradAnim 4s infinite;
-          animation: gradAnim 4s infinite;
-}
-
 .banner .main .text p {
   font-size: 2rem;
 }
@@ -178,6 +170,15 @@ section {
   float: right;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+span {
+  font-weight: 700;
+  background: -webkit-linear-gradient(45deg, #0059ff, #00ffd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: gradAnim 4s infinite;
+          animation: gradAnim 4s infinite;
 }
 
 .about {
@@ -207,6 +208,7 @@ section {
 }
 
 .about .container .skills {
+  margin: 15px;
   width: 50%;
   height: 100%;
 }
@@ -249,7 +251,7 @@ section {
 
 .services {
   background: white;
-  padding: 200px 50px;
+  padding: 150px 50px;
 }
 
 .services .container {
@@ -265,9 +267,6 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .services .container .title h2 {
@@ -275,13 +274,15 @@ section {
 }
 
 .services .container .card-container {
+  height: 100%;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
 }
 
 .services .container .card-container .card {
@@ -289,8 +290,9 @@ section {
   transition: 0.4s;
   width: 25%;
   margin: 10px;
-  height: 300px;
-  background: #333;
+  height: 350px;
+  padding: 20px;
+  background: #151515;
   border-radius: 8px;
 }
 
@@ -307,6 +309,123 @@ section {
 .services .container .card-container .card:hover {
   border-radius: 0;
   background: linear-gradient(45deg, #0059ff, #00ffd5);
+}
+
+.contact {
+  padding: 150px 50px;
+}
+
+.contact .container {
+  background: #151515;
+  height: 100%;
+  padding: 50px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.contact .container .title h2 {
+  font-size: 3rem;
+}
+
+.contact .container .row .left {
+  padding-top: 20px;
+  height: 100%;
+  width: 40%;
+}
+
+.contact .container .row .left form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .container .row .left form input,
+.contact .container .row .left form textarea {
+  background: transparent;
+  color: white;
+  height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.contact .container .row .left form input::-webkit-input-placeholder,
+.contact .container .row .left form textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+.contact .container .row .left form input:-ms-input-placeholder,
+.contact .container .row .left form textarea:-ms-input-placeholder {
+  color: white;
+}
+
+.contact .container .row .left form input::-ms-input-placeholder,
+.contact .container .row .left form textarea::-ms-input-placeholder {
+  color: white;
+}
+
+.contact .container .row .left form input::placeholder,
+.contact .container .row .left form textarea::placeholder {
+  color: white;
+}
+
+.contact .container .row .left form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact .container .row .right {
+  width: 60%;
+  padding: 20px;
+  padding-left: 70px;
+}
+
+.contact .container .row .right .card {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  background: black;
+  margin-bottom: 20px;
+  padding: 20px 50px;
+}
+
+.contact .container .row .right .card h2 {
+  font-size: 1.3rem;
+}
+
+.contact .container .row .right .card:hover {
+  border-radius: 0;
+  background: linear-gradient(45deg, #0059ff, #00ffd5);
+}
+
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  height: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 @media (max-width: 1200px) {
@@ -422,6 +541,35 @@ section {
   }
   .services .container .title h2 {
     font-size: 2rem;
+  }
+  .contact {
+    height: 130vh;
+    padding: 0;
+  }
+  .contact .container {
+    border-radius: 0;
+    text-align: center;
+  }
+  .contact .container .row {
+    margin: 0 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .container .row .left,
+  .contact .container .row .right {
+    width: 100%;
+  }
+  .contact .container .row * {
+    margin: 0;
+  }
+  .contact .container .row .left {
+    margin-top: 25px;
+  }
+  .contact .container .row .right {
+    margin-top: 25px;
+    padding: 0;
   }
   nav {
     display: none;
