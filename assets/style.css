@@ -28,6 +28,9 @@ body {
 }
 
 section {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   height: 100vh;
   min-width: 600px;
@@ -372,7 +375,6 @@ span {
   background: #151515;
   height: 100%;
   padding: 50px;
-  overflow: hidden;
   border-radius: 15px;
 }
 
@@ -486,25 +488,6 @@ span {
   background: linear-gradient(45deg, #0059ff, #00ffd5);
 }
 
-.footer {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #000;
-  padding: 75px;
-}
-
 a {
   text-decoration: none;
   color: white;
@@ -538,9 +521,15 @@ hr {
   color: black;
 }
 
-.h-invert nav ul li a, .h-invert .menu {
+.h-invert nav ul li a,
+.h-invert .menu {
   -webkit-filter: invert(1);
           filter: invert(1);
+}
+
+.footer {
+  padding: 50px;
+  display: fixed;
 }
 
 @media (max-width: 1200px) {
@@ -628,7 +617,7 @@ hr {
     font-size: 1rem;
   }
   .services {
-    height: 130vh;
+    height: 150vh;
     padding: 0;
   }
   .services .container {
@@ -636,16 +625,17 @@ hr {
     border-radius: 0;
     background: white;
     color: black;
+    overflow: hidden;
   }
   .services .container img {
     -webkit-filter: invert(1);
             filter: invert(1);
   }
   .services .container .card-container {
-    margin-top: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: 0 100px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -674,6 +664,7 @@ hr {
   .contact .container {
     border-radius: 0;
     text-align: center;
+    overflow: auto;
   }
   .contact .container .row {
     margin: 0 5%;
