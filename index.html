@@ -3,268 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
     <title>Aqeel</title>
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
-    <script src="./assets/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(
-            function () {
-                $('.close').click(
-                    function () {
-                        $('.menulist').css("display", "none");
-                    }
-                );
-                $('.menu').click(
-                    function () {
-                        $('.menulist').css("display", "flex");
-                    }
-                );
-                $('.menulist ul li a').click(
-                    function () {
-                        $('.menulist').css("display", "none");
-                    }
-                );
-            }
-        );
-        $(window).on("scroll", function () {
-            //if ($(window).scrollTop() > parseInt($('.banner').css('height'))) {
-            if ($(window).scrollTop() < 200) {
-                $("header").removeClass("h-active h-active-2");
-                $(".slider").css("left", "0px");
-            }
-
-            if ($(window).scrollTop() > 200) {
-                $("header").addClass("h-active");
-                $("header").removeClass("h-active-2 h-invert");
-                $(".slider").css("left", "0px");
-            }
-
-            if ($(window).scrollTop() > parseInt($('.banner').css('height')) - 100) {
-                $("header").addClass("h-active-2");
-                $("header").removeClass("h-active h-invert");
-                $(".slider").css("left", "125px");
-                $('.progress:eq(0)').css("width", "95%");
-                $('.progress:eq(1)').css("width", "80%");
-                $('.progress:eq(2)').css("width", "65%");
-                $('.progress:eq(3)').css("width", "95%");
-                $('.progress:eq(4)').css("width", "60%");
-            }
-
-            if ($(window).scrollTop() > parseInt($('.banner').css('height')) * 2 - 100) {
-                $("header").addClass("h-invert");
-                $("header").removeClass("h-active h-active-2");
-                $(".slider").css("left", "270px");
-            }
-
-            if ($(window).scrollTop() > parseInt($('.banner').css('height')) * 3 - 100) {
-                $("header").addClass("h-active");
-                $("header").removeClass("h-invert h-active-2");
-                $(".slider").css("left", "430px");
-            }
-
-        });
-    </script>
-
 </head>
 
 <body>
+    <div id="app">
+        <div style="display: flex; align-items: flex-end; margin-bottom: 40px;">
+            <h1 class="glitch" data-text="aq.sh">aq.sh</h1>
+            <h1 id="cursor">_</h1>
+        </div>
+        <div class="link-button" style="display: flex; align-items: center;">
+            <i id="icon" style="margin-right: 10px;" data-feather="github"></i>
+            <a href="https://github.com/aqeelshamz" target="_blank">GitHub</a>
+        </div>
+        <div class="link-button" style="display: flex; align-items: center;">
+            <i id="icon" style="margin-right: 10px;" data-feather="at-sign"></i>
+            <a href="mailto:aqeelten@gmail.com" target="_blank">aqeelten@gmail.com</a>
+        </div>
+        <div class="link-button" style="display: flex; align-items: center;">
+            <i id="icon" style="margin-right: 10px;" data-feather="instagram"></i>
+            <a href="https://instagram.com/aqeelshamz" target="_blank">Instagram</a>
+        </div>
 
-    <div class="menulist">
-        <div class="close"></div>
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#services">SERVICES</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
     </div>
-
-    <section class="banner">
-        <header>
-            <div class="logo">
-                <h2>aqeelshamz</h2>
-            </div>
-            <div class="menu"></div>
-            <nav>
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#services">services</a></li>
-                    <li><a href="#contact">contact</a></li>
-                    <li class="slider"></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="main">
-            <div class="text">
-                <h2>Hello I'm <span>Aqeel</span></h2>
-                <p>Web Developer & Designer</p>
-            </div>
-            <div class="img">
-                <img src="./assets/back.png" alt="Back">
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about column">
-        <div class="container">
-            <div class="text">
-                <div class="title">
-                    <h2>About Me</h2>
-                </div>
-                <p>Hello World! I'm Aqeel. I'm a Computer Engineering Student. I'm interested in technology and
-                    programming.
-                </p>
-            </div>
-
-            <div class="skills">
-                <div class="title">
-                    <h2>My Skills</h2>
-                </div>
-                <div class="skill-list">
-                    <div class="progress-bar">
-                        <div class="title">
-                            <p>HTML, CSS</p>
-                        </div>
-                        <div class="progress-back">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="title">
-                            <p>JavaScript</p>
-                        </div>
-                        <div class="progress-back">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="title">
-                            <p>PHP, SQL</p>
-                        </div>
-                        <div class="progress-back">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="title">
-                            <p>XD, Photoshop</p>
-                        </div>
-                        <div class="progress-back">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="title">
-                            <p>C# .NET</p>
-                        </div>
-                        <div class="progress-back">
-                            <div class="progress"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <div class="title">
-                <h2>My Services</h2>
-            </div>
-            <div class="card-container">
-                <div class="card">
-                    <div>
-                        <img src="./assets/webdev.png" alt="web">
-                        <h2>Web Development</h2>
-                        <p>Design and develop static and dynamic websites</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <img src="./assets/uidesign.png" alt="ui">
-                        <h2>UI Designing</h2>
-                        <p>Design web and mobile app user interfaces</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <img src="./assets/graphics.png" alt="graphics">
-                        <h2>Graphic Designing</h2>
-                        <p>Design amazing logos and posters</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <img src="./assets/pentesting.png" alt="pentesting">
-                        <h2>Pentesting</h2>
-                        <p>Check for vulnerabilities in your website or Android app</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="title">
-                <h2>Contact Me</h2>
-            </div>
-            <div class="row">
-                <div class="left">
-                    <form action="#">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <input type="text" placeholder="Subject">
-                        <textarea name="" id="" placeholder="Message"></textarea>
-                        <input type="submit" value="Send">
-                    </form>
-                </div>
-                <hr color="#333">
-                <div class="right">
-                    <div class="card">
-                        <h2>Address</h2>
-                        <p>
-                        <address>Puzhankaraillath House. Venkitangu P.O 680510 Thoyakkavu<br>Thrissur, Kerala<br>India
-                        </address>
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h2>Social Profiles</h2>
-                        <div class="logos">
-                            <a href="https://instagram.com/aqeelshamz" target="_blank"><img src="./assets/instagram.svg"
-                                    alt="Instagram"></a>
-                            <a href="https://twitter.com/aqeelshamz" target="_blank"><img src="./assets/twitter.svg"
-                                    alt="Twitter"></a>
-                        </div>
-                    </div>
-                    <div class="card pointer" onclick="window.open('mailto:aqeelten@gmail.com')">
-                        <h2>Email</h2>
-                        <p><a href="mailto:aqeelten@gmail.com" target="_blank">aqeelten@gmail.com</a></p>
-                    </div>
-                    <div class="card pointer" onclick="window.open('https://wa.me/919961053608')">
-                        <h2>WhatsApp</h2>
-                        <p><a href="https://wa.me/919961053608" target="_blank">+919961053608</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div class="footer">
-        <p>Designed by <span>Aqeel</span></p>   
-    </div>
-
-
-
-
+    <script>
+        feather.replace()
+    </script>
 </body>
 
 </html>

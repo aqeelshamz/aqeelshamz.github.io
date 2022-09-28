@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
+html,
+body,
+h1 {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+i {
+  color: white;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#app .glitch {
+  font-size: 4rem;
+  font-weight: bolder;
+  -webkit-animation: gradient 5s infinite;
+          animation: gradient 5s infinite;
+  background: -webkit-linear-gradient(-45deg, #2b67ff, #049979);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#app #cursor {
+  font-size: 4rem;
+  color: white;
+  -webkit-animation: cursor 0.8s infinite;
+          animation: cursor 0.8s infinite;
+}
+
+#app .link-button {
+  margin-top: 30px;
+}
+
+#app .link-button a,
+#app .link-button #icon {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.2rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#app .link-button:hover a {
+  color: white;
+}
+
+#app .link-button:hover #icon {
+  color: white;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-webkit-keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
