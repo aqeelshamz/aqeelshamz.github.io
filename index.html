@@ -1,38 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/feather-icons"></script>
     <title>Aqeel</title>
-</head>
+  </head>
 
-<body>
-    <div id="app">
-        <div style="display: flex; align-items: flex-end; margin-bottom: 40px;">
-            <h1 class="glitch" data-text="aq.sh">aq.sh</h1>
-            <h1 id="cursor">_</h1>
+  <body>
+    <div class="navbar">
+      <p id="logo">aqeelshamz</p>
+      <div class="social-links">
+        <i
+          onclick="window.open('https://github.com/aqeelshamz')"
+          id="icon"
+          style="margin-right: 10px"
+          data-feather="github"
+        ></i>
+        <i
+          onclick="window.open('https://www.linkedin.com/in/aqeel-shamsudheen-90a886229')"
+          id="icon"
+          style="margin-right: 10px"
+          data-feather="linkedin"
+        ></i>
+        <i
+          onclick="window.open('https://instagram.com/aqeelshamz')"
+          id="icon"
+          style="margin-right: 10px"
+          data-feather="instagram"
+        ></i>
+      </div>
+    </div>
+    <div class="main">
+      <div class="left">
+        <p>Hello I'm <span>Aqeel</span></p>
+        <p id="subtext">Full Stack Developer</p>
+      </div>
+      <div class="container">
+        <div
+          class="card"
+          onclick="window.open('https://github.com/aqeelshamz/quran')"
+        >
+          <div class="column">
+            <p id="title">quran</p>
+            <p id="sub-title">Quran for Flutter</p>
+          </div>
+          <div class="chip">Dart</div>
         </div>
-        <div class="link-button" style="display: flex; align-items: center;">
-            <i id="icon" style="margin-right: 10px;" data-feather="github"></i>
-            <a href="https://github.com/aqeelshamz" target="_blank">GitHub</a>
+        <div
+          class="card"
+          onclick="window.open('https://github.com/aqeelshamz/dpsub')"
+        >
+          <div class="column">
+            <p id="title">dbsub</p>
+            <p id="sub-title">
+              DPSUB (Dynamic Positioned Subtitles) positions subtitles and
+              captions dynamically on screen.
+            </p>
+          </div>
+          <div class="row">
+            <div class="chip">HTML</div>
+            <div class="chip">JavaScript</div>
+          </div>
         </div>
-        <div class="link-button" style="display: flex; align-items: center;">
-            <i id="icon" style="margin-right: 10px;" data-feather="at-sign"></i>
-            <a href="mailto:aqeelten@gmail.com" target="_blank">aqeelten@gmail.com</a>
+        <div
+          class="card"
+          onclick="window.open('https://github.com/aqeelshamz/neumorfic')"
+        >
+          <div class="column">
+            <p id="title">neumorfic</p>
+            <p id="sub-title">
+              neumorfic framework provides Neumorphic design elements (Button,
+              TextBox, Radio, Checkbox, Switch, Nav Button, Progress Bar,
+              Dropdown list) for your webpage.
+            </p>
+          </div>
+          <div class="row">
+            <div class="chip">HTML</div>
+            <div class="chip">CSS</div>
+            <div class="chip">JS</div>
+          </div>
         </div>
-        <div class="link-button" style="display: flex; align-items: center;">
-            <i id="icon" style="margin-right: 10px;" data-feather="instagram"></i>
-            <a href="https://instagram.com/aqeelshamz" target="_blank">Instagram</a>
+        <div
+          class="card"
+          onclick="window.open('https://github.com/aqeelshamz/InstagramClone')"
+        >
+          <div class="column">
+            <p id="title">Instagram Clone</p>
+            <p id="sub-title">Instagram Clone made with Flutter</p>
+          </div>
+          <div class="chip">Flutter</div>
         </div>
-
+        <div
+          class="card"
+          onclick="window.open('https://github.com/aqeelshamz/FlutterTicTacToe')"
+        >
+          <div class="column">
+            <p id="title">Tic tac toe</p>
+            <p id="sub-title">Tic tac toe Game</p>
+          </div>
+          <div class="chip">Flutter</div>
+        </div>
+        <div
+          class="card"
+          onclick="window.open('https://github.com/aqeelshamz/wixzel-os')"
+        >
+          <div class="column">
+            <p id="title">Wixzel OS</p>
+            <p id="sub-title">Virtual OS made in VB.NET</p>
+          </div>
+          <div class="chip">Visual Basic</div>
+        </div>
+      </div>
     </div>
     <script>
-        feather.replace()
+      feather.replace();
     </script>
-</body>
-
+  </body>
 </html>
