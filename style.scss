@@ -136,6 +136,7 @@ body {
 
 @media (max-width: 1200px) {
   body {
+    min-width: 100vw;
     overflow-y: auto;
   }
   body .navbar {
