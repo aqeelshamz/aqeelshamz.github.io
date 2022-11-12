@@ -170,10 +170,20 @@ body {
         margin-bottom: 20px;
       }
       .card {
+        font-size: 0.8rem;
         margin: 0;
         margin-bottom: 20px;
         width: 100%;
         max-width: none;
+        min-width: auto;
+        min-height: auto;
+        #title {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+        #sub-title {
+          font-size: 0.8rem;
+        }
       }
       .card:hover {
         transform: scale(1);
