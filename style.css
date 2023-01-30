@@ -11,6 +11,13 @@
           user-select: none;
 }
 
+#pictory {
+  margin: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 30vw;
+}
+
 .column {
   display: flex;
   flex-direction: column;
@@ -59,6 +66,10 @@ body .main {
   overflow: hidden;
 }
 body .main .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   min-width: 500px;
   padding-bottom: 10%;
 }
@@ -133,6 +144,9 @@ body .main .container .card:hover {
 }
 
 @media (max-width: 1200px) {
+  #pictory {
+    width: 100%;
+  }
   body {
     min-width: 100vw;
     overflow-y: auto;
