@@ -1,207 +1,123 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Source+Code+Pro:wght@500&display=swap");
 
 * {
-  color: white;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
-  user-select: none;
-}
-
-#pictory{
-  margin: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
-  width: 30vw;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  min-width: 500px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+  padding: 50px;
   width: 100vw;
   height: 100vh;
-  background-image: radial-gradient(
-    at center right,
-    rgb(14, 54, 124),
-    black,
-    black
-  );
-  .navbar {
-    padding: 40px 10vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    #logo {
-      font-size: 2rem;
-      font-weight: 500;
-    }
-    .social-links {
-      #icon {
-        cursor: pointer;
-        margin-left: 40px;
-        transition: 0.1s;
-        transform: scale(1.2);
-      }
-      #icon:hover {
-        transform: scale(1.4);
-      }
+  background: black;
+  color: white;
+  * {
+    opacity: 0;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 1s;
+  }
+  h2 {
+    font-family: "Source Code Pro", monospace;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 6rem;
+    margin-bottom: 20px;
+    width: fit-content;
+    animation-duration: 1.2s;
+    span {
+      transition: 0.2s;
     }
   }
-  .main {
-    width: 100%;
-    height: 80vh;
-    margin: 20px 10vw;
+  h1:hover {
+    span {
+      color: #00de8e;
+    }
+  }
+  #desc, #desc2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+    animation-duration: 1.5s;
+  }
+  #desc2 {
+    display: none;
+  }
+  .row {
     display: flex;
-    font-size: 4rem;
-    font-weight: 500;
+    animation-delay: 1s;
+    margin-top: 50px;
+  }
+  .align-center {
     align-items: center;
-    overflow: hidden;
-    .left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      min-width: 500px;
-      padding-bottom: 10%;
-      span {
-        font-weight: 700;
-        background: -webkit-linear-gradient(cyan, dodgerblue);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      #subtext {
-        font-size: 2rem;
-      }
-    }
-    .container {
-      width: 65%;
-      display: flex;
-      flex-wrap: wrap;
-      height: 100%;
-      font-size: 2rem;
-      padding: 30px;
-      margin-left: 50px;
-      overflow-y: auto;
-      padding-bottom: 30px;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-      .card {
-        cursor: pointer;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 20px;
-        font-size: 1rem;
-        margin-top: 25px;
-        margin-right: 25px;
-        min-width: 400px;
-        width: 40%;
-        max-width: 400px;
-        min-height: 200px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border-radius: 20px;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        #title {
-          font-size: 1.4rem;
-          font-weight: 600;
-        }
-        #sub-title {
-          margin-top: 5px;
-          font-size: 1rem;
-          font-weight: normal;
-          opacity: 0.8;
-          margin-bottom: 10px;
-        }
-        .chip {
-          background: rgba(255, 255, 255, 0.2);
-          width: fit-content;
-          padding: 5px 40px;
-          border-radius: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-right: 10px;
-        }
-        transition: 0.2s;
-      }
-      .card:hover {
-        transform: scale(1.04);
-      }
-    }
+  }
+  button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #00de8e;
+    background: transparent;
+    border: none;
+    transition: 0.2s;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-right: 15px;
+  }
+  button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+//fade in animation keyframes
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
 
 @media (max-width: 1200px) {
-  #pictory{
-    width: 100%;
-  }
   body {
-    min-width: 100vw;
-    overflow-y: auto;
-  }
-  body .navbar {
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    #icon {
-      margin: 40px 20px;
+    min-width: 100vw;
+    overflow-y: auto;
+    h1 {
+      font-size: 4rem;
     }
-  }
-  body .main {
-    height: 100%;
-    flex-direction: column;
-    margin: 0;
-    font-size: 2rem;
-    .left {
-      display: flex;
+    #desc{
+        display: none;
+    }
+    #desc2 {
+      display: unset;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .row {
       flex-direction: column;
+    }
+    button {
       justify-content: center;
-      align-items: center;
-      padding-bottom: 10px;
-    }
-    .container {
-      flex-direction: column;
-      flex-wrap: nowrap;
-      margin: 0;
-      margin-top: 20px;
-      padding: 0;
-      width: 80%;
-      #my-projects-title {
-        margin-bottom: 20px;
-      }
-      .card {
-        font-size: 0.8rem;
-        margin: 0;
-        margin-bottom: 20px;
-        width: 100%;
-        max-width: none;
-        min-width: auto;
-        min-height: auto;
-        #title {
-          font-size: 1rem;
-          font-weight: 600;
-        }
-        #sub-title {
-          font-size: 0.8rem;
-        }
-      }
-      .card:hover {
-        transform: scale(1);
-      }
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+      width: 100%;
     }
   }
 }
