@@ -80,6 +80,18 @@
       width: 100%;
       object-fit: contain;
     }
+
+    .icon {
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      margin-right: 30px;
+      transition: 0.2s;
+    }
+
+    .icon:hover{
+      transform: scale(1.2);
+    }
   </style>
 </head>
 
@@ -90,9 +102,18 @@
       <h2 class="text-[4rem]">Hi 👋</h2>
       <h1 class="text-[8rem]">I'm Aqeel</h1>
       <p class="text-[2.5rem]">I build things for mobile & web</p>
-      <button onclick='window.open("Aqeel_CV.pdf")'
-        class="mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">Download
-        CV</button>
+      <div class="mt-20 flex items-center">
+        <button onclick='window.open("Aqeel_CV.pdf")'
+          class="pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">Download
+          CV</button>
+        <div class="flex ml-10">
+          <img onclick="window.open('mailto:aqeelten@gmail.com')" class="icon" src="gmail.png"/>
+          <img onclick="window.open('https://github.com/aqeelshamz')" class="icon" src="github.png"/>
+          <img onclick="window.open('https://www.linkedin.com/in/aqeelshamz')" class="icon" src="linkedin.png"/>
+          <img onclick="window.open('https://stackoverflow.com/users/11350679/aqeel')" class="icon" src="stackoverflow.png"/>
+          <img onclick="window.open('https://instagram.com/aqeelshamz')" class="icon" src="instagram.png"/>
+        </div>
+      </div>
     </div>
     <div class="relative">
       <div class="shadows border-4 border-black rounded-[50px] bg-red overflow-hidden w-[25vw]">
