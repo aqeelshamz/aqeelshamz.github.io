@@ -1,351 +1,364 @@
+<!-- Assalamu alaikum bro,
+Happy to see you here :) -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Freelance Full Stack Developer and CSE student with expertise in MERN and Flutter. Passionate about coding, technology, and AI." />
-  <meta name="keywords"
-    content="freelancer, full stack developer, CSE student, MERN, Flutter, coding, freelance, tech, AI, GitHub, LinkedIn, Instagram, StackOverFlow" />
-  <meta name="author" content="Aqeel" />
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Aqeel</title>
+  <title>Aqeel Shamsudheen Portfolio</title>
   <style>
-    @font-face {
-      font-family: Nohemi;
-      src: url(Nohemi-Regular.ttf);
-      font-weight: normal;
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
     }
 
-    @font-face {
-      font-family: Nohemi-Medium;
-      src: url(Nohemi-Medium.ttf);
-      font-weight: bold;
-    }
-
-    @font-face {
-      font-family: Nohemi-SemiBold;
-      src: url(Nohemi-SemiBold.ttf);
-      font-weight: bolder;
-    }
-
+    /* Reset & Base Styles */
     * {
-      font-family: Nohemi;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-
+    
+    /* Hide default cursor */
     body {
-      overflow-x: hidden;
-      width: 100vw;
-      height: 100vh;
+      background-color: #1e1e1e;
+      color: #c5c6c7;
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 1.6;
+      cursor: none;
+      position: relative;
     }
-
+    
+    a {
+      color: #00fbb0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: #00e0a2; /* Slightly darker shade for hover */
+    }
+    
+    /* Custom Mouse Pointer */
+    .custom-cursor {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #00fbb0;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.15s ease-out, background-color 0.3s ease;
+      z-index: 9999;
+    }
+    .custom-cursor.click {
+      transform: translate(-50%, -50%) scale(1.5);
+      background-color: rgba(0, 251, 176, 0.3);
+    }
+    
+    /* Header with Parallax Background */
+    header {
+      padding: 2rem;
+      text-align: center;
+      /* Parallax background with dark overlay */
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://source.unsplash.com/1600x900/?tech');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      border-bottom: 1px solid #333;
+      color: #fff;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    header p.tagline {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #bbb;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    
+    nav ul li {
+      font-size: 1rem;
+    }
+    
+    /* Sections */
     section {
-      height: 100vh;
-      width: 100vw;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
-
-    h1,
-    h2 {
-      font-family: Nohemi-SemiBold;
+    
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
     }
-
-    p {
-      font-family: Nohemi-Regular;
+    
+    /* Work Experience Items */
+    .experience-item {
+      margin-bottom: 2rem;
     }
-
-    span {
-      font-family: Nohemi-Medium;
+    
+    .experience-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.3rem;
     }
-
-    .shadows {
-      box-shadow: 15px 15px;
+    
+    .experience-item p {
+      margin-bottom: 0.5rem;
     }
-
-    .shadows-l {
-      box-shadow: 10px 10px;
+    
+    .experience-item ul {
+      margin-left: 1.5rem;
+      list-style-type: disc;
     }
-
-    .card {
-      box-shadow: 5px 5px;
-      margin-right: 25px;
-      margin-bottom: 25px;
-      max-width: 500px;
+    
+    .experience-item ul li {
+      margin-bottom: 0.3rem;
     }
-
-    .card img {
-      background: red;
-      width: 100%;
-      object-fit: contain;
+    
+    /* Portfolio Items */
+    .portfolio-item {
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease-in-out;
     }
-
-    .icon {
-      cursor: pointer;
-      width: 50px;
-      height: 50px;
-      margin-right: 30px;
-      transition: 0.2s;
+    
+    .portfolio-item:hover {
+      transform: scale(1.02);
     }
-
-    .icon:hover{
-      transform: scale(1.2);
+    
+    .portfolio-item h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .portfolio-item p {
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Contact */
+    .contact-links a {
+      margin-right: 1rem;
+    }
+    
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #121212;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+    }
+    
+    /* Scroll-triggered Animations */
+    .hidden {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
-
 <body>
-  <section class="flex items-center p-[10vw] justify-between w-full">
-    <img class="absolute top-[-500px] left-[-500px]" src="gradient.png" />
-    <div class="md:w-auto w-full md:items-auto flex-col items-center z-10">
-      <h2 class="md:text-start text-center text-[5rem] md:text-[4rem]">Hi 👋</h2>
-      <h1 class="md:text-start text-center text-[7rem] md:text-[8rem]">I'm Aqeel</h1>
-      <p class="md:text-start md:text-start text-center text-[2.2rem]">I build things for mobile & web</p>
-      <div class="mt-20 flex-col items-center">
-        <button onclick='window.open("Aqeel_CV.pdf")'
-          class="w-full pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">Download
-          CV</button>
-        <div class="w-full flex justify-center mt-10 ml-10">
-          <img onclick="window.open('mailto:aqeelten@gmail.com')" class="icon" src="gmail.png"/>
-          <img onclick="window.open('https://github.com/aqeelshamz')" class="icon" src="github.png"/>
-          <img onclick="window.open('https://www.linkedin.com/in/aqeelshamz')" class="icon" src="linkedin.png"/>
-          <img onclick="window.open('https://stackoverflow.com/users/11350679/aqeel')" class="icon" src="stackoverflow.png"/>
-          <img onclick="window.open('https://instagram.com/aqeelshamz')" class="icon" src="instagram.png"/>
-        </div>
-      </div>
-    </div>
-    <div class="relative hidden md:block">
-      <div class="shadows border-4 border-black rounded-[50px] bg-red overflow-hidden w-[25vw]">
-        <img class="w-full h-full object-cover" src="https://media.licdn.com/dms/image/D5603AQE9sETRSgwlcw/profile-displayphoto-shrink_800_800/0/1708306278678?e=1718841600&v=beta&t=0cbaOFytgzpV6Rj-_3HvaG0Sh7eJWjpR_jJx5L9Dl64" />
-      </div>
-    </div>
-  </section>
-  <section class="h-auto px-[10vw] py-[5vw]">
-    <h1 class="md:text-start text-center text-[3rem]">About Me</h1>
-    <p class="md:text-start text-center leading-[3rem] text-[1.7rem] mt-10">I'm a <span>Full Stack Developer</span> based in India<br />with
-      expertise in <span>MERN</span> &
-      <span>Flutter</span>.<br />Passionate about <span>coding, technology, AI</span> & <span>UI/UX</span>.
+  <!-- Custom Mouse Pointer -->
+  <div class="custom-cursor"></div>
+  
+  <!-- Header -->
+  <header>
+    <h1>Aqeel Shamsudheen</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- About Section -->
+  <section id="about" class="hidden">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      Hi, I’m Aqeel Shamsudheen—a passionate software developer specializing in Flutter and Full-Stack Development. I build innovative SaaS platforms, mobile apps, and AI-powered solutions. Currently pursuing my B.Tech in Computer Science & Engineering at Government Engineering College, Thrissur, I’m always pushing the boundaries of technology.
     </p>
-    <h1 class="md:text-start text-center text-[3rem] mt-20">Skills</h1>
-    <p class="md:text-start text-center text-[1.5rem] text-[#606060]">Technologies I've been working with recently</p>
-    <div class="flex justify-center mt-20">
-      <img class="w-[100vw]" src="skills.png" />
+  </section>
+  
+  <!-- Work Experience Section -->
+  <section id="experience" class="hidden">
+    <h2 class="section-title">Work Experience</h2>
+    
+    <div class="experience-item">
+      <h3>Flutter Developer Intern</h3>
+      <p><strong>iTurn, Trivandrum, Kerala</strong> <span>(June 2024 – Present)</span></p>
+      <ul>
+        <li>Contributing to the development of an on-demand driving training app providing a personalized and efficient learning experience.</li>
+        <li><strong>Android App:</strong> <a href="https://play.google.com/store/apps/details?id=com.ucmonks.iturn.rider" target="_blank">iTurn Rider</a></li>
+        <li><strong>iOS App:</strong> <a href="https://apps.apple.com/in/app/iturn/id1667153391" target="_blank">iTurn on App Store</a></li>
+      </ul>
+    </div>
+    
+    <div class="experience-item">
+      <h3>Full-stack Developer (Freelance)</h3>
+      <p><strong>Darsmate Learning App</strong> <span>(August 2023 – March 2024)</span></p>
+      <ul>
+        <li>Developed a comprehensive e-learning platform with a mobile app and admin panel.</li>
+        <li><strong>Tech Stack:</strong> Flutter, Next.js, Node.js, MongoDB, Firebase, Ubuntu</li>
+        <li><strong>Android App:</strong> <a href="https://play.google.com/store/apps/details?id=com.darsmate" target="_blank">Darsmate on Google Play</a></li>
+        <li><strong>iOS App:</strong> <a href="https://apps.apple.com/in/app/darsmate/id6475296013" target="_blank">Darsmate on App Store</a></li>
+      </ul>
+    </div>
+    
+    <div class="experience-item">
+      <h3>Full-stack Developer (Freelance)</h3>
+      <p><strong>Webbebo Technologies, Coimbatore</strong> <span>(October 2021 – May 2023)</span></p>
+      <ul>
+        <li>Built SaaS platforms, including <strong>Calendly Clone</strong> and <strong>Typeform Clone</strong>.</li>
+        <li><strong>Tech Stack:</strong> React.js, Next.js, Node.js, MongoDB, Ubuntu, CentOS</li>
+        <li><strong>Projects:</strong> <a href="https://tf.tny.so" target="_blank">Typeform Clone</a> | <a href="https://cc.tny.so" target="_blank">Calendly Clone</a></li>
+      </ul>
+    </div>
+    
+    <div class="experience-item">
+      <h3>Flutter Developer (Freelance)</h3>
+      <p><strong>Palmate Technologies, Jeddah, Saudi Arabia</strong> <span>(December 2020 – February 2022)</span></p>
+      <ul>
+        <li>Developed the <strong>Alwadi International School</strong> app for seamless school management.</li>
+        <li><strong>Tech Stack:</strong> Flutter, Google Play Store Deployment</li>
+        <li><strong>iOS App:</strong> <a href="https://apps.apple.com/us/app/alwadi-international-school/id1565558255" target="_blank">Alwadi International School</a></li>
+      </ul>
+    </div>
+    
+    <div class="experience-item">
+      <h3>Flutter Developer (Freelance)</h3>
+      <p><strong>Wisdom Islamic Organization</strong> <span>(October 2020 – January 2022)</span></p>
+      <ul>
+        <li>Developed the <strong>Edifice Learning App</strong> for mobile and web-based education.</li>
+        <li><strong>Tech Stack:</strong> Flutter, React.js, Google Play Store Deployment</li>
+        <li><strong>iOS App:</strong> <a href="https://apps.apple.com/us/app/edifice-learning-app/id1535187735" target="_blank">Edifice Learning App</a></li>
+      </ul>
     </div>
   </section>
-  <section class="h-auto px-[10vw] py-[5vw]">
-    <h1 class="md:text-start text-center text-[3rem]">Experience</h1>
-    <p class="md:text-start text-center text-[1.5rem] text-[#606060] mb-10">My professional journey</p>
-    <div class="w-full shadows-l px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-[25vw]">
-      <div class="flex justify-between">
-        <div>
-          <h1 class="text-[2rem]">Freelance Full Stack Developer</h1>
-          <p class="text-[1.5rem] text-[#606060]">Webbebo Technologies</p>
-        </div>
-        <p class="text-[1.5rem] text-[#606060]">October 2021 - May 2023</p>
-      </div>
-      <div>
-        <ul class="list-disc mt-7 text-[1.2rem] text-[#535353]">
-          <li>Built Frontend & Backend for an Appoinment Scheduling App</li>
-          <li>Built Frontend & Backend for an Online Form Builder App</li>
-          <li class="mt-5">Technologies: React.js , Next.js , Node.js , MongoDB</li>
-        </ul>
-      </div>
+  
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="hidden">
+    <h2 class="section-title">Projects</h2>
+    
+    <div class="portfolio-item">
+      <h3>EvaluateAI</h3>
+      <p>AI-powered answer sheet evaluator and marksheet generator SaaS platform.</p>
+      <p><a href="https://codecanyon.net/item/evaluateai-ai-powered-answer-sheet-evaluator-and-marksheet-generator-saas-platform/50774309" target="_blank">Purchase Project</a></p>
     </div>
-    <div class="mt-10 w-full shadows-l px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-[25vw]">
-      <div class="flex justify-between">
-        <div>
-          <h1 class="text-[2rem]">Freelance Flutter Developer</h1>
-          <p class="text-[1.5rem] text-[#606060]">Palmate Technologies</p>
-        </div>
-        <p class="text-[1.5rem] text-[#606060]">December 2020 - February 2022</p>
-      </div>
-      <div>
-        <ul class="list-disc mt-7 text-[1.2rem] text-[#535353]">
-          <li>Built and published Android & iOS Apps for Alwadi International School</li>
-          <li class="mt-5">Technologies: Flutter, UI/UX</li>
-        </ul>
-      </div>
+    
+    <div class="portfolio-item">
+      <h3>RewordAI</h3>
+      <p>AI-powered rewriting and grammar correction tool.</p>
+      <p><a href="https://codecanyon.net/item/rewordai-ai-rewriter-and-grammar-corrector-saas-platform/50500483" target="_blank">Purchase Project</a></p>
     </div>
-  </section>
-  <section class="h-auto px-[10vw] py-[5vw]">
-    <h1 class="md:text-start text-center text-[3rem] mt-20">Projects</h1>
-    <p class="md:text-start text-center text-[1.5rem] text-[#606060]">Some Things I've built so far</p>
-    <div class="flex md:justify-start justify-center flex-wrap mt-10">
-      <!-- <div class="card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="zaptox.png"/>
-        </div>
-        <h1 class="text-[2rem]">Zaptox</h1>
-        <p class="text-[1.5rem] text-[#606060]">Self Improvement App</p>
-        <button
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on Play Store</button>
-      </div> -->
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="postify.png" />
-        </div>
-        <h1 class="text-[2rem]">Postify</h1>
-        <p class="text-[1.5rem] text-[#606060]">REST API Client</p>
-        <button onclick='window.open("https://play.google.com/store/apps/details?id=com.aqeelshamz.postify")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on Play Store</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="onlyform_1.png" />
-        </div>
-        <h1 class="text-[2rem]">Onlyform</h1>
-        <p class="text-[1.5rem] text-[#606060]">Online Form Builder</p>
-        <button onclick='window.open("https://tf.tny.so/")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          Site</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="edifice.png" />
-        </div>
-        <h1 class="text-[2rem]">Edifice Learning App</h1>
-        <p class="text-[1.5rem] text-[#606060]">Learning App</p>
-        <button onclick='window.open("https://apps.apple.com/us/app/edifice-learning-app/id1535187735")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on App Store</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="alwadi.png" />
-        </div>
-        <h1 class="text-[2rem]">Alwadi International School App</h1>
-        <p class="text-[1.5rem] text-[#606060]">School App</p>
-        <button onclick='window.open("https://apps.apple.com/us/app/alwadi-international-school/id1565558255")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on App Store</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="wallpapers.png" />
-        </div>
-        <h1 class="text-[2rem]">Wallpapers</h1>
-        <p class="text-[1.5rem] text-[#606060]">Wallpaper App</p>
-        <button onclick='window.open("https://codecanyon.net/item/flutter-wallpaper-app/33425561")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">Purchase
-          Project</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="grocery.png" />
-        </div>
-        <h1 class="text-[2rem]">Grocery App</h1>
-        <p class="text-[1.5rem] text-[#606060]">Full Stack Grocery Mobile App with Admin Panel</p>
-        <button
-          onclick='window.open("https://codecanyon.net/item/flutter-grocery-app-reactjs-admin-panel-nodejs-backend/34422080")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">Purchase
-          Project</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="quran.png" />
-        </div>
-        <h1 class="text-[2rem]">quran</h1>
-        <p class="text-[1.5rem] text-[#606060]">Quran Dart package</p>
-        <button onclick='window.open("https://pub.dev/packages/quran")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on pub.dev</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="quran-db.png" />
-        </div>
-        <h1 class="text-[2rem]">quran-db</h1>
-        <p class="text-[1.5rem] text-[#606060]">Quran npm package</p>
-        <button onclick='window.open("https://www.npmjs.com/package/quran-db")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on npmjs.com</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="tictactoe.png" />
-        </div>
-        <h1 class="text-[2rem]">TicTacToe</h1>
-        <p class="text-[1.5rem] text-[#606060]">Tic Tac Toe for Android</p>
-        <button onclick='window.open("https://play.google.com/store/apps/details?id=com.aqeelshamz.tictactoe")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on Play Store</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="wixzel.png" />
-        </div>
-        <h1 class="text-[2rem]">Wixzel OS</h1>
-        <p class="text-[1.5rem] text-[#606060]">Virtual OS for Windows</p>
-        <button onclick='window.open("https://github.com/aqeelshamz/wixzel-os")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on GitHub</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="system77.png" />
-        </div>
-        <h1 class="text-[2rem]">System77</h1>
-        <p class="text-[1.5rem] text-[#606060]">Remote Access Tool for PC</p>
-        <button onclick='window.open("https://github.com/aqeelshamz/system-77")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on GitHub</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="skillsift.png" />
-        </div>
-        <h1 class="text-[2rem]">SkillSift</h1>
-        <p class="text-[1.5rem] text-[#606060]">Job Platform</p>
-        <button onclick='window.open("https://github.com/aqeelshamz/skillsift")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on GitHub</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="projected.png" />
-        </div>
-        <h1 class="text-[2rem]">Project Ed</h1>
-        <p class="text-[1.5rem] text-[#606060]">AI Powered Educational Presentation Generator</p>
-        <button onclick='window.open("https://github.com/aqeelshamz/project-ed")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on GitHub</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <div class="bg-red w-full mb-5">
-          <img src="zapspace.png" />
-        </div>
-        <h1 class="text-[2rem]">Zapspace</h1>
-        <p class="text-[1.5rem] text-[#606060]">eCommerce platform for small local business</p>
-        <button onclick='window.open("https://github.com/aqeelshamz/zapspace")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on Play Store</button>
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <h1 class="text-[2rem]">IntelliChef</h1>
-        <p class="text-[1.5rem] text-[#606060]">AI Powered Personal Chef</p>
-        <!-- <button
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on Play Store</button> -->
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <h1 class="text-[2rem]">RewordAI</h1>
-        <p class="text-[1.5rem] text-[#606060]">AI Rewriter and Grammar Correcting</p>
-        <!-- <button
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          on Play Store</button> -->
-      </div>
-      <div class="w-full card px-10 py-5 border-2 border-black rounded-[20px] bg-red overflow-hidden w-auto">
-        <h1 class="text-[2rem]">Calendly Clone</h1>
-        <p class="text-[1.5rem] text-[#606060]">Appoinment Scheduling App</p>
-        <button onclick='window.open("https://cc.tny.so/")'
-          class="w-full mt-20 pointer hover:scale-105 duration-75 bg-black text-white text-[1.4rem] px-20 py-5 rounded-[50px]">View
-          Site</button>
-      </div>
-    </div>
-  </section>
-</body>
 
+    <div class="portfolio-item">
+      <h3>Quran (Dart package)</h3>
+      <p>A dart package for Quran text, audio URLs, and metadata—covering pages, juz, surah, ayah, and more.</p>
+      <p><a href="https://pub.dev/packages/quran" target="_blank">View on pub.dev</a></p>
+    </div>
+    
+    <div class="portfolio-item">
+      <h3>Zaptox: Self Growth Network</h3>
+      <p>Self-improvement app.</p>
+      <p><a href="https://www.instagram.com/zaptox.app" target="_blank">Instagram</a></p>
+    </div>
+    
+    <div class="portfolio-item">
+      <h3>Postify</h3>
+      <p>REST API client for Android.</p>
+      <p><a href="https://codecanyon.net/item/postify-flutter-rest-api-client/33463112" target="_blank">Purchase Project</a></p>
+    </div>
+
+    <div class="portfolio-item">
+      <h3>UploadThing (Dart package)</h3>
+      <p>An unofficial Dart/Flutter SDK for the UploadThing API, providing seamless file upload capabilities for your applications.</p>
+      <p><a href="https://pub.dev/packages/uploadthing" target="_blank">View on pub.dev</a></p>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="hidden">
+    <h2 class="section-title">Contact</h2>
+    <p>If you’d like to connect, feel free to reach out via email or follow me on GitHub and LinkedIn.</p>
+    <p>Email: <a href="mailto:aqeelten@gmail.com">aqeelten@gmail.com</a></p>
+    <p class="contact-links">
+      <a href="https://github.com/aqeelshamz" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/aqeelshamz" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Aqeel Shamsudheen. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript for Scroll-triggered Animations and Custom Cursor -->
+  <script>
+    // Scroll-triggered section animation
+    document.addEventListener("DOMContentLoaded", function() {
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      
+      document.querySelectorAll(".hidden").forEach((el) => {
+        observer.observe(el);
+      });
+    });
+    
+    // Custom Mouse Pointer Animation
+    const cursor = document.querySelector(".custom-cursor");
+    document.addEventListener("mousemove", function(e) {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+    
+    document.addEventListener("click", function() {
+      cursor.classList.add("click");
+      setTimeout(() => {
+        cursor.classList.remove("click");
+      }, 150);
+    });
+    
+    // Parallax Effect on Header Background
+    window.addEventListener("scroll", function() {
+      let scrollPosition = window.pageYOffset;
+      // Adjust the background position to move at half the scroll speed
+      document.querySelector("header").style.backgroundPositionY = -(scrollPosition * 0.5) + "px";
+    });
+  </script>
+</body>
 </html>
