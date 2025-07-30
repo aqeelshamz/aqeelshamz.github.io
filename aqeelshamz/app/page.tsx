@@ -35,7 +35,7 @@ export default function Home() {
     setTimeout(() => {
       const projectsSection = document.getElementById('projects');
       if (projectsSection) {
-        const yOffset = -80; // Account for fixed navbar
+        const yOffset = window.innerWidth < 640 ? -60 : -80; // Smaller offset for mobile
         const y = projectsSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
       }
@@ -62,30 +62,30 @@ export default function Home() {
           ? 'bg-black/80 border-gray-600' 
           : 'bg-white/80 border-gray-200'
       }`}>
-        <div className="max-w-4xl mx-auto px-6 py-4">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-lg font-medium">Aqeel Shamsudheen</h1>
-            <div className="flex items-center space-x-8">
-              <a href="#about" className={`text-sm transition-colors ${
+            <h1 className="text-base sm:text-lg font-medium">Aqeel Shamsudheen</h1>
+            <div className="flex items-center space-x-3 sm:space-x-6 md:space-x-8">
+              <a href="#about" className={`text-xs sm:text-sm transition-colors ${
                 isDarkMode ? 'hover:text-gray-300' : 'hover:text-gray-600'
               }`}>About</a>
-              <a href="#experience" className={`text-sm transition-colors ${
+              <a href="#experience" className={`text-xs sm:text-sm transition-colors hidden sm:block ${
                 isDarkMode ? 'hover:text-gray-300' : 'hover:text-gray-600'
               }`}>Experience</a>
-              <a href="#projects" className={`text-sm transition-colors ${
+              <a href="#projects" className={`text-xs sm:text-sm transition-colors ${
                 isDarkMode ? 'hover:text-gray-300' : 'hover:text-gray-600'
               }`}>Projects</a>
-              <a href="#education" className={`text-sm transition-colors ${
+              <a href="#education" className={`text-xs sm:text-sm transition-colors hidden sm:block ${
                 isDarkMode ? 'hover:text-gray-300' : 'hover:text-gray-600'
               }`}>Education</a>
-              <a href="#contact" className={`text-sm transition-colors ${
+              <a href="#contact" className={`text-xs sm:text-sm transition-colors ${
                 isDarkMode ? 'hover:text-gray-300' : 'hover:text-gray-600'
               }`}>Contact</a>
               
               {/* Theme Toggle Button */}
               <button
                 onClick={toggleTheme}
-                className={`p-2 rounded-lg transition-colors ${
+                className={`p-1.5 sm:p-2 rounded-lg transition-colors ${
                   isDarkMode 
                     ? 'hover:bg-gray-900 text-yellow-400' 
                     : 'hover:bg-gray-100 text-gray-600'
@@ -94,12 +94,12 @@ export default function Home() {
               >
                 {isDarkMode ? (
                   // Sun icon for light mode
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 ) : (
                   // Moon icon for dark mode
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 )}
@@ -110,41 +110,23 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-24 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl font-light tracking-tight">
+          <div className="space-y-4 sm:space-y-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-light tracking-tight leading-tight">
               Full Stack Developer & Entrepreneur
             </h1>
-            <p className={`text-lg md:text-xl max-w-3xl transition-colors ${
+            <p className={`text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed transition-colors ${
               isDarkMode ? 'text-gray-200' : 'text-gray-600'
             }`}>
               I create innovative mobile and web applications spanning AI-powered platforms, enterprise SaaS solutions, and educational technology.
               Specializing in Flutter, React, Node.js with expertise in GenAI integration and scalable architectures.
             </p>
-            {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4 text-sm text-gray-500 max-w-2xl">
-              <div className="text-center">
-                <div className="font-medium text-black">15+</div>
-                <div>Live Applications</div>
-              </div>
-              <div className="text-center">
-                <div className="font-medium text-black">5+</div>
-                <div>Open Source Packages</div>
-              </div>
-              <div className="text-center">
-                <div className="font-medium text-black">10+</div>
-                <div>Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="font-medium text-black">Multiple</div>
-                <div>Hackathon Wins</div>
-              </div>
-            </div> */}
-            <div className="flex space-x-4 pt-4">
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
               <a
                 href="/Aqeel_CV.pdf"
                 download="Aqeel_Shamsudheen_Resume.pdf"
-                className={`px-6 py-2 text-sm font-medium transition-colors ${
+                className={`px-6 py-3 text-sm font-medium transition-colors text-center ${
                   isDarkMode 
                     ? 'bg-white text-black hover:bg-gray-200' 
                     : 'bg-black text-white hover:bg-gray-800'
@@ -154,7 +136,7 @@ export default function Home() {
               </a>
               <a
                 href="#contact"
-                className={`px-6 py-2 border text-sm font-medium transition-colors ${
+                className={`px-6 py-3 border text-sm font-medium transition-colors text-center ${
                   isDarkMode 
                     ? 'border-gray-500 hover:border-gray-400' 
                     : 'border-gray-300 hover:border-gray-400'
@@ -168,13 +150,13 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className={`py-20 px-6 border-t transition-colors ${
+      <section id="about" className={`py-16 sm:py-20 px-4 sm:px-6 border-t transition-colors ${
         isDarkMode ? 'border-gray-600' : 'border-gray-200'
       }`}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-light mb-12">About</h2>
-          <div className="grid md:grid-cols-2 gap-16">
-            <div className="space-y-6">
+          <h2 className="text-2xl font-light mb-8 sm:mb-12">About</h2>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            <div className="space-y-4 sm:space-y-6">
               <p className={`transition-colors ${
                 isDarkMode ? 'text-gray-200' : 'text-gray-600'
               }`}>
@@ -207,10 +189,10 @@ export default function Home() {
                 solutions that bridge the gap between cutting-edge technology and real-world needs.
               </p>
             </div>
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8">
               <div>
-                <h3 className="text-lg font-medium mb-4">Core Technologies</h3>
-                <div className="grid grid-cols-2 gap-2">
+                <h3 className="text-lg font-medium mb-3 sm:mb-4">Core Technologies</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-2">
                   {[
                     "Flutter", "React", "Next.js", "Node.js",
                     "MongoDB", "Firebase", "JavaScript", "TypeScript",
@@ -226,7 +208,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium mb-4">Specializations</h3>
+                <h3 className="text-lg font-medium mb-3 sm:mb-4">Specializations</h3>
                 <div className="space-y-2">
                   {[
                     "Mobile App Development", "SaaS Platforms",
@@ -243,7 +225,7 @@ export default function Home() {
               </div>
 
               <div>
-                <h3 className="text-lg font-medium mb-4">Achievements</h3>
+                <h3 className="text-lg font-medium mb-3 sm:mb-4">Achievements</h3>
                 <div className="space-y-2">
                   <span className={`text-sm block transition-colors ${
                     isDarkMode ? 'text-gray-300' : 'text-gray-600'
@@ -265,20 +247,20 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className={`py-20 px-6 border-t transition-colors ${
+      <section id="experience" className={`py-16 sm:py-20 px-4 sm:px-6 border-t transition-colors ${
         isDarkMode ? 'border-gray-600' : 'border-gray-200'
       }`}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-light mb-12">Experience</h2>
-          <div className="space-y-12">
+          <h2 className="text-2xl font-light mb-8 sm:mb-12">Experience</h2>
+          <div className="space-y-8 sm:space-y-12">
             {/* Experience Item 1 */}
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="md:col-span-1">
+            <div className="grid lg:grid-cols-4 gap-4 lg:gap-6">
+              <div className="lg:col-span-1">
                 <p className={`text-sm transition-colors ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-500'
                 }`}>Jun 2024 — Present</p>
               </div>
-              <div className="md:col-span-3">
+              <div className="lg:col-span-3">
                 <h3 className="text-lg font-medium mb-2">Flutter Developer Intern</h3>
                 <p className={`mb-2 transition-colors ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-600'
@@ -301,13 +283,13 @@ export default function Home() {
             </div>
 
             {/* Experience Item 2 */}
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="md:col-span-1">
+            <div className="grid lg:grid-cols-4 gap-4 lg:gap-6">
+              <div className="lg:col-span-1">
                 <p className={`text-sm transition-colors ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-500'
                 }`}>2023 — 2024</p>
               </div>
-              <div className="md:col-span-3">
+              <div className="lg:col-span-3">
                 <h3 className="text-lg font-medium mb-2">Full-stack Developer</h3>
                 <p className={`mb-2 transition-colors ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-600'
@@ -330,13 +312,13 @@ export default function Home() {
             </div>
 
             {/* Experience Item 3 */}
-            <div className="grid md:grid-cols-4 gap-6">
-              <div className="md:col-span-1">
+            <div className="grid lg:grid-cols-4 gap-4 lg:gap-6">
+              <div className="lg:col-span-1">
                 <p className={`text-sm transition-colors ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-500'
                 }`}>Aug 2023 — Mar 2024</p>
               </div>
-              <div className="md:col-span-3">
+              <div className="lg:col-span-3">
                 <h3 className="text-lg font-medium mb-2">Full-stack Developer</h3>
                 <p className={`mb-2 transition-colors ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-600'
@@ -420,20 +402,20 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className={`py-20 px-6 border-t transition-colors ${
+      <section id="projects" className={`py-16 sm:py-20 px-4 sm:px-6 border-t transition-colors ${
         isDarkMode ? 'border-gray-600' : 'border-gray-200'
       }`}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-light mb-8">Projects</h2>
+          <h2 className="text-2xl font-light mb-6 sm:mb-8">Projects</h2>
 
           {/* Project Category Tabs */}
-          <div className={`sticky top-14 z-40 mb-8 border-b pt-2 transition-colors ${
+          <div className={`sticky top-12 sm:top-14 z-40 mb-6 sm:mb-8 border-b pt-2 transition-colors ${
             isDarkMode ? 'bg-black border-gray-600' : 'bg-white border-gray-200'
           }`}>
-            <div className="flex space-x-1">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-1 overflow-x-auto">
               <button
                 onClick={() => handleTabChange("professional")}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+                className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
                   activeProjectTab === "professional"
                     ? (isDarkMode ? "border-white text-white" : "border-black text-black")
                     : `border-transparent ${
@@ -447,7 +429,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => handleTabChange("personal")}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+                className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
                   activeProjectTab === "personal"
                     ? (isDarkMode ? "border-white text-white" : "border-black text-black")
                     : `border-transparent ${
@@ -461,7 +443,7 @@ export default function Home() {
               </button>
               <button
                 onClick={() => handleTabChange("academic")}
-                className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
+                className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${
                   activeProjectTab === "academic"
                     ? (isDarkMode ? "border-white text-white" : "border-black text-black")
                     : `border-transparent ${
@@ -478,7 +460,7 @@ export default function Home() {
 
           {/* Professional & Freelance Projects */}
           {activeProjectTab === "professional" && (
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
               <div className="space-y-4">
                 <div
                   className="w-full aspect-[2/1] bg-gray-100 rounded-lg mb-4 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
@@ -492,8 +474,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Sprint Learning App</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Sprint Learning App</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-green-500/20 text-green-200' : 'bg-green-100 text-green-700'
                   }`}>Freelance</span>
@@ -501,7 +483,7 @@ export default function Home() {
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>Live on Stores</span>
                 </div>
-                <p className={`transition-colors ${
+                <p className={`text-sm sm:text-base transition-colors ${
                   isDarkMode ? 'text-gray-200' : 'text-gray-600'
                 }`}>
                   Comprehensive educational platform for Kerala & CBSE students (9th–12th grade). Features student-friendly notes, recorded video lessons, pop-up questions for enhanced retention, and live doubt support sessions.
@@ -538,8 +520,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Mentorsa</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Mentorsa</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-green-500/20 text-green-200' : 'bg-green-100 text-green-700'
                   }`}>Freelance</span>
@@ -589,8 +571,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Darsmate Learning App</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Darsmate Learning App</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-green-500/20 text-green-200' : 'bg-green-100 text-green-700'
                   }`}>Freelance</span>
@@ -640,8 +622,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Web-based SaaS Projects</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Web-based SaaS Projects</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-green-500/20 text-green-200' : 'bg-green-100 text-green-700'
                   }`}>Freelance</span>
@@ -683,8 +665,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Alwadi International School App</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Alwadi International School App</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-green-500/20 text-green-200' : 'bg-green-100 text-green-700'
                   }`}>Freelance</span>
@@ -717,7 +699,7 @@ export default function Home() {
 
           {/* Personal & Open Source Projects */}
           {activeProjectTab === "personal" && (
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
               <div className="space-y-4">
                 <div
                   className="w-full aspect-[2/1] bg-gray-100 rounded-lg mb-4 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
@@ -731,8 +713,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Zaptox</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Zaptox</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-orange-500/20 text-orange-200' : 'bg-orange-100 text-orange-700'
                   }`}>Social Platform</span>
@@ -769,8 +751,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">EvaluateAI</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">EvaluateAI</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>AI Platform</span>
@@ -810,8 +792,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">RevDroid GUI</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">RevDroid GUI</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-purple-500/20 text-purple-200' : 'bg-purple-100 text-purple-700'
                   }`}>Security Tool</span>
@@ -851,8 +833,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">macOSProxy</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">macOSProxy</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>macOS App</span>
@@ -892,8 +874,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">RewordAI</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">RewordAI</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>AI SaaS Platform</span>
@@ -933,8 +915,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Postify</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Postify</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-orange-500/20 text-orange-200' : 'bg-orange-100 text-orange-700'
                   }`}>REST API Client</span>
@@ -974,8 +956,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Flutter Grocery App</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Flutter Grocery App</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-green-500/20 text-green-200' : 'bg-green-100 text-green-700'
                   }`}>E-commerce</span>
@@ -1015,8 +997,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">TimeTable App (Wear OS)</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">TimeTable App (Wear OS)</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-purple-500/20 text-purple-200' : 'bg-purple-100 text-purple-700'
                   }`}>Wear OS</span>
@@ -1056,8 +1038,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Neumorfic CSS Framework</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Neumorfic CSS Framework</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-indigo-500/20 text-indigo-200' : 'bg-indigo-100 text-indigo-700'
                   }`}>CSS</span>
@@ -1099,8 +1081,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Quran Package</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Quran Package</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>Dart Package</span>
@@ -1140,8 +1122,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">UploadThing Package</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">UploadThing Package</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>Flutter SDK</span>
@@ -1178,8 +1160,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">rot13 Package</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">rot13 Package</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>Dart Package</span>
@@ -1219,8 +1201,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Hadith Package</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Hadith Package</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>Dart Package</span>
@@ -1260,8 +1242,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">System77</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">System77</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-red-500/20 text-red-200' : 'bg-red-100 text-red-700'
                   }`}>Remote Access Tool</span>
@@ -1306,8 +1288,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Wixzel OS</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Wixzel OS</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-purple-500/20 text-purple-200' : 'bg-purple-100 text-purple-700'
                   }`}>Virtual OS</span>
@@ -1339,7 +1321,7 @@ export default function Home() {
 
           {/* Hackathons & College Projects */}
           {activeProjectTab === "academic" && (
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
               <div className="space-y-4">
                 <div
                   className="w-full aspect-[2/1] bg-gray-100 rounded-lg mb-4 overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
@@ -1353,8 +1335,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">StratX</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">StratX</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-blue-500/20 text-blue-200' : 'bg-blue-100 text-blue-700'
                   }`}>College Project</span>
@@ -1399,8 +1381,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">valuate.ai</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">valuate.ai</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-yellow-500/20 text-yellow-200' : 'bg-yellow-100 text-yellow-700'
                   }`}>🏆 First Prize</span>
@@ -1448,8 +1430,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Zapspace</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Zapspace</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-yellow-500/20 text-yellow-200' : 'bg-yellow-100 text-yellow-700'
                   }`}>🏆 Second Prize</span>
@@ -1494,8 +1476,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">IntelliForm</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">IntelliForm</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-yellow-500/20 text-yellow-200' : 'bg-yellow-100 text-yellow-700'
                   }`}>🏆 Second Prize</span>
@@ -1540,8 +1522,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">SkillSift</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">SkillSift</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-yellow-500/20 text-yellow-200' : 'bg-yellow-100 text-yellow-700'
                   }`}>Hackathon</span>
@@ -1581,8 +1563,8 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-lg font-medium">Project Ed</h3>
+                <div className="flex flex-wrap items-center gap-2">
+                  <h3 className="text-base sm:text-lg font-medium">Project Ed</h3>
                   <span className={`px-2 py-1 text-xs rounded transition-colors ${
                     isDarkMode ? 'bg-yellow-500/20 text-yellow-200' : 'bg-yellow-100 text-yellow-700'
                   }`}>🏆 Second Prize</span>
@@ -1619,51 +1601,51 @@ export default function Home() {
       </section>
 
       {/* Education Section */}
-      <section id="education" className={`py-20 px-6 border-t transition-colors ${
+      <section id="education" className={`py-16 sm:py-20 px-4 sm:px-6 border-t transition-colors ${
         isDarkMode ? 'border-gray-600' : 'border-gray-200'
       }`}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-light mb-12">Education</h2>
-          <div className="space-y-8">
+          <h2 className="text-2xl font-light mb-8 sm:mb-12">Education</h2>
+          <div className="space-y-6 sm:space-y-8">
 
             {/* Bachelor's Degree */}
-            <div className={`border-l-2 pl-6 transition-colors ${
+            <div className={`border-l-2 pl-4 sm:pl-6 transition-colors ${
               isDarkMode ? 'border-gray-500' : 'border-gray-200'
             }`}>
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 className="text-lg font-medium">Bachelor of Technology (B.Tech)</h3>
-                <span className={`text-sm transition-colors ${
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                <h3 className="text-base sm:text-lg font-medium">Bachelor of Technology (B.Tech)</h3>
+                <span className={`text-sm mt-1 sm:mt-0 transition-colors ${
                   isDarkMode ? 'text-gray-300' : 'text-gray-500'
                 }`}>Sep 2022 - Apr 2025</span>
               </div>
-              <p className={`mb-1 transition-colors ${
+              <p className={`mb-1 text-sm sm:text-base transition-colors ${
                 isDarkMode ? 'text-gray-200' : 'text-gray-600'
               }`}>Computer Science & Engineering</p>
-              <p className={`mb-1 transition-colors ${
+              <p className={`mb-1 text-sm sm:text-base transition-colors ${
                 isDarkMode ? 'text-gray-200' : 'text-gray-600'
               }`}>Government Engineering College, Thrissur</p>
-              <p className={`mb-3 transition-colors ${
+              <p className={`mb-3 text-sm sm:text-base transition-colors ${
                 isDarkMode ? 'text-gray-200' : 'text-gray-600'
               }`}>Grade: 8.35</p>
             </div>
 
             {/* Diploma */}
-            <div className={`border-l-2 pl-6 transition-colors ${
+            <div className={`border-l-2 pl-4 sm:pl-6 transition-colors ${
               isDarkMode ? 'border-gray-500' : 'border-gray-200'
             }`}>
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                <h3 className="text-lg font-medium">Diploma in Computer Science</h3>
-                <span className={`text-sm transition-colors ${
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                <h3 className="text-base sm:text-lg font-medium">Diploma in Computer Science</h3>
+                <span className={`text-sm mt-1 sm:mt-0 transition-colors ${
                   isDarkMode ? 'text-gray-300' : 'text-gray-500'
                 }`}>2019 - 2022</span>
               </div>
-              <p className={`mb-1 transition-colors ${
+              <p className={`mb-1 text-sm sm:text-base transition-colors ${
                 isDarkMode ? 'text-gray-200' : 'text-gray-600'
               }`}>Computer Engineering</p>
-              <p className={`mb-1 transition-colors ${
+              <p className={`mb-1 text-sm sm:text-base transition-colors ${
                 isDarkMode ? 'text-gray-200' : 'text-gray-600'
               }`}>Sree Rama Government Polytechnic College, Triprayar</p>
-              <p className={`mb-3 transition-colors ${
+              <p className={`mb-3 text-sm sm:text-base transition-colors ${
                 isDarkMode ? 'text-gray-200' : 'text-gray-600'
               }`}>Grade: 8.95</p>
             </div>
@@ -1673,19 +1655,19 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className={`py-20 px-6 border-t transition-colors ${
+      <section id="contact" className={`py-16 sm:py-20 px-4 sm:px-6 border-t transition-colors ${
         isDarkMode ? 'border-gray-600' : 'border-gray-200'
       }`}>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-light mb-12">Contact</h2>
+          <h2 className="text-2xl font-light mb-8 sm:mb-12">Contact</h2>
           <div className="space-y-4">
-            <p className={`transition-colors ${
+            <p className={`text-sm sm:text-base transition-colors ${
               isDarkMode ? 'text-gray-200' : 'text-gray-600'
             }`}>
               I'm always interested in new opportunities and interesting projects.
               Feel free to reach out if you'd like to work together.
             </p>
-            <div className="flex space-x-8">
+            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-8">
               <a
                 href="mailto:aqeelten@gmail.com"
                 className="text-sm underline underline-offset-4 hover:no-underline"
@@ -1714,7 +1696,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className={`py-12 px-6 border-t transition-colors ${
+      <footer className={`py-8 sm:py-12 px-4 sm:px-6 border-t transition-colors ${
         isDarkMode ? 'border-gray-600' : 'border-gray-200'
       }`}>
         <div className="max-w-4xl mx-auto">
@@ -1729,13 +1711,13 @@ export default function Home() {
       {/* Image Modal */}
       {modalImage && (
         <div
-          className="fixed inset-0 bg-black flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black flex items-center justify-center z-50 p-4 sm:p-6"
           onClick={closeModal}
         >
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full max-w-4xl max-h-full">
             <button
               onClick={closeModal}
-              className="absolute top-6 right-6 text-white text-3xl z-10 hover:text-gray-300 bg-black bg-opacity-70 rounded-full w-12 h-12 flex items-center justify-center transition-colors"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white text-2xl sm:text-3xl z-10 hover:text-gray-300 bg-black bg-opacity-70 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center transition-colors"
             >
               ×
             </button>
@@ -1743,7 +1725,7 @@ export default function Home() {
               src={modalImage.src}
               alt={modalImage.alt}
               fill
-              className="object-contain"
+              className="object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
           </div>
