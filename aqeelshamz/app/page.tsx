@@ -64,6 +64,7 @@ export default function Home() {
             <div className="flex space-x-4 pt-4">
               <a
                 href="/Aqeel_CV.pdf"
+                download="Aqeel_Shamsudheen_Resume.pdf"
                 className="px-6 py-2 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors"
               >
                 Resume
