@@ -115,7 +115,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
               <a
-                href="/Aqeel_CV.pdf"
+                href="/Aqeel_Shamsudheen.pdf"
                 download="Aqeel_Shamsudheen_Resume.pdf"
                 className={`px-6 py-3 text-sm font-medium transition-colors text-center ${isDarkMode
                     ? 'bg-white text-black hover:bg-gray-200'
