@@ -52,13 +52,13 @@ export default function Home() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${isDarkMode
-        ? 'bg-black text-white'
-        : 'bg-white text-black'
+      ? 'bg-black text-white'
+      : 'bg-white text-black'
       }`}>
       {/* Navigation */}
       <nav className={`fixed top-0 w-full backdrop-blur-sm border-b z-50 transition-colors duration-300 ${isDarkMode
-          ? 'bg-black/80 border-gray-600'
-          : 'bg-white/80 border-gray-200'
+        ? 'bg-black/80 border-gray-600'
+        : 'bg-white/80 border-gray-200'
         }`}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex justify-between items-center">
@@ -79,8 +79,8 @@ export default function Home() {
               <button
                 onClick={toggleTheme}
                 className={`p-1.5 sm:p-2 rounded-lg transition-colors ${isDarkMode
-                    ? 'hover:bg-gray-900 text-yellow-400'
-                    : 'hover:bg-gray-100 text-gray-600'
+                  ? 'hover:bg-gray-900 text-yellow-400'
+                  : 'hover:bg-gray-100 text-gray-600'
                   }`}
                 aria-label="Toggle theme"
               >
@@ -118,8 +118,8 @@ export default function Home() {
                 href="/Aqeel_Shamsudheen.pdf"
                 download="Aqeel_Shamsudheen_Resume.pdf"
                 className={`px-6 py-3 text-sm font-medium transition-colors text-center ${isDarkMode
-                    ? 'bg-white text-black hover:bg-gray-200'
-                    : 'bg-black text-white hover:bg-gray-800'
+                  ? 'bg-white text-black hover:bg-gray-200'
+                  : 'bg-black text-white hover:bg-gray-800'
                   }`}
               >
                 Resume
@@ -127,8 +127,8 @@ export default function Home() {
               <a
                 href="#contact"
                 className={`px-6 py-3 border text-sm font-medium transition-colors text-center ${isDarkMode
-                    ? 'border-gray-500 hover:border-gray-400'
-                    : 'border-gray-300 hover:border-gray-400'
+                  ? 'border-gray-500 hover:border-gray-400'
+                  : 'border-gray-300 hover:border-gray-400'
                   }`}
               >
                 Contact
@@ -231,11 +231,36 @@ export default function Home() {
           <h2 className="text-2xl font-light mb-8 sm:mb-12">Experience</h2>
           <div className="space-y-8 sm:space-y-12">
 
+            {/* Experience Item 0 */}
+            <div className="grid lg:grid-cols-4 gap-4 lg:gap-6">
+              <div className="lg:col-span-1">
+                <p className={`text-sm transition-colors ${isDarkMode ? 'text-gray-200' : 'text-gray-500'
+                  }`}>Aug 2025 — Present</p>
+              </div>
+              <div className="lg:col-span-3">
+                <h3 className="text-lg font-medium mb-2">Software Engineer</h3>
+                <p className={`mb-2 transition-colors ${isDarkMode ? 'text-gray-200' : 'text-gray-600'
+                  }`}>Crink.App (Full-time)</p>
+                <p className={`mb-4 transition-colors ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                  Building an AI Coach for mental well-being.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["GenAI", "Flutter", "React.js", "FastAPI", "Hasura DDN", "GraphQL", "Electron"].map((tech) => (
+                    <span key={tech} className={`px-2 py-1 text-xs transition-colors ${isDarkMode ? 'bg-gray-700 text-gray-200' : 'bg-gray-100 text-gray-700'
+                      }`}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             {/* Experience Item 1 */}
             <div className="grid lg:grid-cols-4 gap-4 lg:gap-6">
               <div className="lg:col-span-1">
                 <p className={`text-sm transition-colors ${isDarkMode ? 'text-gray-200' : 'text-gray-500'
-                  }`}>Mar 2025 — Present</p>
+                  }`}>Mar 2025 — Aug 2025</p>
               </div>
               <div className="lg:col-span-3">
                 <h3 className="text-lg font-medium mb-2">Full-stack Developer</h3>
@@ -334,6 +359,35 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Experience Item 5 */}
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="md:col-span-1">
+                <p className={`text-sm transition-colors ${isDarkMode ? 'text-gray-200' : 'text-gray-500'
+                  }`}>2012 — 2020</p>
+              </div>
+              <div className="md:col-span-3">
+                <h3 className="text-lg font-medium mb-2">Flutter & Full-stack Developer</h3>
+                <p className={`mb-2 transition-colors ${isDarkMode ? 'text-gray-200' : 'text-gray-600'
+                  }`}>Freelance</p>
+                <p className={`mb-4 transition-colors ${isDarkMode ? 'text-gray-300' : 'text-gray-600'
+                  }`}>
+                  My freelance works during this period:
+                  Edifice Learning App,
+                  Alwadi International School App,
+                  Enterprise level SaaS Platforms: Calendly.com Clone (cc.tny.so) - appointment management software &
+                  Typeform.com Clone (tf.tny.so) - form builder.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Visual Basic 6", "VB.NET", "Windows XP", "Windows Movie Maker", "2D Animation", "Drawing", "Macromedia Flash", "Kinetix 3D Studio Max", "C#", "Desktop Applications", "Web Designing", "JavaScript", "PHP", "Python", "Unity", "Video Editing", "Graphic Designing", "Visual Studio 2009", "Kali Linux", "Arduino", "Raspberry Pi", "UI/UX", "Logo Designing"].map((tech) => (
+                    <span key={tech} className={`px-2 py-1 text-xs transition-colors ${isDarkMode ? 'bg-gray-700 text-gray-200' : 'bg-gray-100 text-gray-700'
+                      }`}>
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -351,11 +405,11 @@ export default function Home() {
               <button
                 onClick={() => handleTabChange("professional")}
                 className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${activeProjectTab === "professional"
-                    ? (isDarkMode ? "border-white text-white" : "border-black text-black")
-                    : `border-transparent ${isDarkMode
-                      ? 'text-gray-300 hover:text-gray-100'
-                      : 'text-gray-500 hover:text-gray-700'
-                    }`
+                  ? (isDarkMode ? "border-white text-white" : "border-black text-black")
+                  : `border-transparent ${isDarkMode
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-gray-500 hover:text-gray-700'
+                  }`
                   }`}
               >
                 Professional & Freelance
@@ -363,11 +417,11 @@ export default function Home() {
               <button
                 onClick={() => handleTabChange("personal")}
                 className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${activeProjectTab === "personal"
-                    ? (isDarkMode ? "border-white text-white" : "border-black text-black")
-                    : `border-transparent ${isDarkMode
-                      ? 'text-gray-300 hover:text-gray-100'
-                      : 'text-gray-500 hover:text-gray-700'
-                    }`
+                  ? (isDarkMode ? "border-white text-white" : "border-black text-black")
+                  : `border-transparent ${isDarkMode
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-gray-500 hover:text-gray-700'
+                  }`
                   }`}
               >
                 Personal & Open Source
@@ -375,11 +429,11 @@ export default function Home() {
               <button
                 onClick={() => handleTabChange("academic")}
                 className={`px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium border-b-2 transition-colors whitespace-nowrap ${activeProjectTab === "academic"
-                    ? (isDarkMode ? "border-white text-white" : "border-black text-black")
-                    : `border-transparent ${isDarkMode
-                      ? 'text-gray-300 hover:text-gray-100'
-                      : 'text-gray-500 hover:text-gray-700'
-                    }`
+                  ? (isDarkMode ? "border-white text-white" : "border-black text-black")
+                  : `border-transparent ${isDarkMode
+                    ? 'text-gray-300 hover:text-gray-100'
+                    : 'text-gray-500 hover:text-gray-700'
+                  }`
                   }`}
               >
                 Hackathons & College Projects
