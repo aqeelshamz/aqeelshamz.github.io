@@ -1,0 +1,49 @@
+# Aqeel Shamsudheen
+
+> Full-stack developer and indie product builder from Kerala, India. Founder of Wixzel. Designs, builds, and ships complete products solo — AI SaaS platforms, Flutter mobile apps, and Next.js web apps. 14+ years building, 30+ apps shipped, with a global client base.
+
+Website: https://aqeelshamz.github.io/
+GitHub: https://github.com/aqeelshamz
+LinkedIn: https://linkedin.com/in/aqeelshamz
+X (Twitter): https://x.com/aqeelshamz
+Email: aqeelten@gmail.com
+
+## Who is Aqeel Shamsudheen?
+
+Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes products end-to-end: idea → architecture → UI → backend → deployment → real usage. He specializes in shipping fast, working solo, and building revenue-generating software rather than demos or side projects.
+
+## Skills & Stack
+
+- Mobile: Flutter, Dart (cross-platform iOS & Android apps)
+- Web: Next.js, React, TypeScript
+- Backend: Node.js, MongoDB, REST APIs, Firebase, FastAPI, GraphQL
+- AI: Generative AI, AI Agents, multi-model AI products
+- Design: UI/UX, Figma, conversion-focused interfaces
+
+## Experience
+
+- Founder, Wixzel (Mar 2026 — present): building and shipping products end-to-end. https://www.wixzel.com
+- Software Engineer, Crink.App (Aug 2025 — Feb 2026): Cri App, an AI Wellbeing Coach. Kochi, Kerala.
+- Full-stack Developer, Teqnify Solutions (Mar 2025 — Aug 2025): built Darsmate, Mentorsa, and Sprint Learning App — complete educational ecosystems (mobile apps, admin panels, backend).
+- Flutter Developer Intern, iTurn (Jun 2024 — Mar 2025): on-demand driving training app used across India.
+- Full-stack Developer, Darsmate Learning App (Aug 2023 — Mar 2024): Islamic e-learning platform.
+- Freelance Flutter & Full-stack Developer (Oct 2021 — May 2023): Edifice Learning App, Alwadi International School App, a Calendly clone, and a Typeform clone — all live in production.
+
+## Notable Projects
+
+- Wixzel One — AI-powered instant app maker for your phone. Tell it what you need in one sentence and it builds a real, working mini app in minutes — no coding, no app store, live with a shareable link. Also builds personal storefronts with WhatsApp ordering and payments via the owner's own Razorpay or Stripe: https://one.wixzel.com/
+- BrandLab — AI brand & content platform; extracts brand DNA from a URL and generates on-brand posts, ads, and creatives in 16+ languages: https://brandlab.wixzel.com/
+- AutoPilotAI — https://www.wixzel.com/products/autopilotai
+- IntelliCall AI — https://intellicallai.wixzel.com/
+- WhatsAgentAI — https://www.wixzel.com/products/whatsagentai
+- WixzelEdu — Flutter LMS mobile app with admin panel and Node.js backend, sold on CodeCanyon: https://codecanyon.net/item/wixzeledu-flutter-lms-mobile-app-with-admin-panel-and-nodejs-backend/61558491
+- Zaptox — https://zaptox.wixzel.com/
+- EvaluateAI — https://aqeelshamz.gumroad.com/l/evaluateai
+- Darsmate — Islamic e-learning platform (iOS & Android): https://apps.apple.com/ae/app/darsmate/id6475296013
+- Mentorsa — mentoring platform (iOS & Android): https://apps.apple.com/in/app/mentorsa/id6746732623
+- Sprint Learning App — https://apps.apple.com/in/app/sprint-learning-app/id6748683716
+- Open source: Neumorfic (https://github.com/aqeelshamz/neumorfic), System 77 (https://github.com/aqeelshamz/system-77), Wixzel OS (https://github.com/aqeelshamz/wixzel-os)
+
+## Hiring / Contact
+
+Aqeel is open to projects. Contact via email (aqeelten@gmail.com) or through https://aqeelshamz.github.io/#contact.
