@@ -31,7 +31,9 @@ Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes
 
 ## Notable Projects
 
+- Wixzel Voice — APIs for AI voice agents. One API key, one balance, every voice engine: no ElevenLabs key, no Deepgram key, no OpenRouter key, and no per-seat pricing. Billed per second of what a call actually consumes: https://voice.wixzel.com/
 - Wixzel One — AI-powered instant app maker for your phone. Tell it what you need in one sentence and it builds a real, working mini app in minutes — no coding, no app store, live with a shareable link. Also builds personal storefronts with WhatsApp ordering and payments via the owner's own Razorpay or Stripe: https://one.wixzel.com/
+- Wixzel Store — a marketplace for independent creators to showcase, sell, or list their digital products for acquisition, keeping 100% of every sale by connecting their own payment gateway: https://store.wixzel.com/
 - BrandLab — AI brand & content platform; extracts brand DNA from a URL and generates on-brand posts, ads, and creatives in 16+ languages: https://brandlab.wixzel.com/
 - AutoPilotAI — https://www.wixzel.com/products/autopilotai
 - IntelliCall AI — https://intellicallai.wixzel.com/
