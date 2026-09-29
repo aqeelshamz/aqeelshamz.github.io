@@ -55,7 +55,7 @@
       "worksFor": {
         "@type": "Organization",
         "name": "Wixzel",
-        "url": "https://www.wixzel.com"
+        "url": "https://wixzel.com"
       },
       "address": {
         "@type": "PostalAddress",
@@ -65,7 +65,10 @@
       "sameAs": [
         "https://github.com/aqeelshamz",
         "https://linkedin.com/in/aqeelshamz",
-        "https://x.com/aqeelshamz"
+        "https://x.com/aqeelshamz",
+        "https://pub.dev/publishers/aqeelshamz.com",
+        "https://www.npmjs.com/~aqeelshamz",
+        "https://aqeelshamz.gumroad.com"
       ],
       "knowsAbout": [
         "Flutter",
@@ -108,7 +111,7 @@
       "mainEntity": {
         "@id": "https://aqeelshamz.github.io/#person"
       },
-      "dateModified": "2026-07-03",
+      "dateModified": "2026-09-29",
       "inLanguage": "en"
     },
     {
@@ -122,8 +125,8 @@
           "item": {
             "@type": "SoftwareApplication",
             "name": "Wixzel Voice",
-            "description": "APIs for AI voice agents. One API key, one balance, every voice engine. No ElevenLabs key, no Deepgram key, no OpenRouter key, and no per-seat pricing. Billed per second of what a call actually consumes.",
-            "url": "https://voice.wixzel.com/",
+            "description": "Wixzel Voice is a voice AI API for building AI agents that place and answer real phone calls over your own SIP trunk, or talk to people in your web and mobile apps. One API key and one prepaid balance cover every voice engine, billed per second of actual usage.",
+            "url": "https://voice.wixzel.com",
             "image": "https://aqeelshamz.github.io/images/wixzelvoice.png",
             "author": {
               "@id": "https://aqeelshamz.github.io/#person"
@@ -1066,7 +1069,7 @@
     color: var(--muted); margin-bottom: 16px;
   }
   .packages-label span { color: var(--accent); margin-left: 6px; }
-  .packages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .packages-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
   .pkg-card {
     background: var(--surface); border: 1px solid var(--border);
     border-radius: 12px; padding: 20px;
@@ -1433,9 +1436,9 @@
       <div>
         <div class="tl-role">Founder</div>
         <div class="tl-company">Wixzel · Self-employed</div>
-        <div class="tl-desc">Building and shipping products end-to-end. My own venture.</div>
+        <div class="tl-desc">Building and shipping products end-to-end. My own venture. Currently building Wixzel Voice, a voice AI API and MCP server that developers use to build AI agents that place and answer real phone calls.</div>
         <div class="tl-tags">
-          <span class="tl-tag">Flutter</span><span class="tl-tag">Next.js</span><span class="tl-tag">Node.js</span><span class="tl-tag">MongoDB</span>
+          <span class="tl-tag">Flutter</span><span class="tl-tag">Next.js</span><span class="tl-tag">Node.js</span><span class="tl-tag">MongoDB</span><span class="tl-tag">Voice AI</span><span class="tl-tag">MCP</span>
         </div>
       </div>
     </div>
@@ -1524,9 +1527,10 @@
         <div class="p-body">
           <div class="p-badges"><span class="p-badge">Voice API</span><span class="p-badge grey">Developer Infra</span><span class="p-date">September 2026</span></div>
           <div class="p-title">Wixzel Voice</div>
-          <div class="p-desc">APIs for AI voice agents. One API key, one balance, every voice engine. No ElevenLabs key, no Deepgram key, no OpenRouter key, and no per-seat pricing. You are billed per second of what a call actually consumes.</div>
-          <div class="p-footer" style="justify-content:flex-end">
-            <div class="p-links"><a href="https://voice.wixzel.com/" target="_blank" class="p-link">Live →</a></div>
+          <div class="p-desc">Wixzel Voice is a voice AI API for building AI agents that place and answer real phone calls over your own SIP trunk, or talk to people in your web and mobile apps. One API key and one prepaid balance cover every voice engine, billed per second of actual usage.</div>
+          <div class="p-footer">
+            <div class="p-stack"><span class="p-stag">HTTP API · MCP server · TypeScript &amp; Dart SDKs</span></div>
+            <div class="p-links"><a href="https://voice.wixzel.com" target="_blank" class="p-link">Live →</a></div>
           </div>
         </div>
       </div>
@@ -1751,31 +1755,61 @@
     <div class="packages-row reveal">
       <div class="packages-label">Dart Packages <span>pub.dev</span></div>
       <div class="packages-grid">
-                <a href="https://pub.dev" target="_blank" class="pkg-card">
+                <a href="https://pub.dev/packages/wixzel_voice" target="_blank" class="pkg-card">
+          <div class="pkg-name">wixzel_voice</div>
+          <div class="pkg-desc">Official Dart and Flutter SDK for the Wixzel Voice API. Build AI agents that place and answer real phone calls.</div>
+          <div class="pkg-link">pub.dev →</div>
+          <div class="pkg-date">Sep 2026</div>
+        </a>
+        <a href="https://pub.dev/packages/uploadthing" target="_blank" class="pkg-card">
           <div class="pkg-name">uploadthing</div>
           <div class="pkg-desc">Unofficial Flutter SDK for the UploadThing file upload API.</div>
           <div class="pkg-link">pub.dev →</div>
           <div class="pkg-date">Oct 2024</div>
         </a>
-        <a href="https://pub.dev" target="_blank" class="pkg-card">
+        <a href="https://pub.dev/packages/hadith" target="_blank" class="pkg-card">
           <div class="pkg-name">hadith</div>
           <div class="pkg-desc">Offline Hadith from Bukhari, Muslim, Abu Dawud, Tirmidhi, Nasai &amp; Ibn Majah.</div>
           <div class="pkg-link">pub.dev →</div>
           <div class="pkg-date">Apr 2023</div>
         </a>
-        <a href="https://pub.dev" target="_blank" class="pkg-card">
+        <a href="https://pub.dev/packages/rot13" target="_blank" class="pkg-card">
           <div class="pkg-name">rot13</div>
           <div class="pkg-desc">ROT13 encoding/decoding: cross-platform Flutter package.</div>
           <div class="pkg-link">pub.dev →</div>
           <div class="pkg-date">Nov 2020</div>
         </a>
-              <a href="https://pub.dev" target="_blank" class="pkg-card">
+              <a href="https://pub.dev/packages/quran" target="_blank" class="pkg-card">
           <div class="pkg-name">quran</div>
           <div class="pkg-desc">Quran text, audio URLs &amp; metadata: pages, juz, surah, ayah and more.</div>
           <div class="pkg-link">pub.dev →</div>
           <div class="pkg-date">Oct 2020</div>
         </a>
 </div>
+    </div>
+    <!-- npm Packages -->
+    <div class="packages-row reveal">
+      <div class="packages-label">npm Packages <span>npmjs.com</span></div>
+      <div class="packages-grid">
+        <a href="https://www.npmjs.com/package/wixzel-voice" target="_blank" class="pkg-card">
+          <div class="pkg-name">wixzel-voice</div>
+          <div class="pkg-desc">Official TypeScript and JavaScript SDK for the Wixzel Voice API. Build AI agents that place and answer real phone calls.</div>
+          <div class="pkg-link">npm →</div>
+          <div class="pkg-date">Sep 2026</div>
+        </a>
+        <a href="https://www.npmjs.com/package/wixzel-voice-mcp" target="_blank" class="pkg-card">
+          <div class="pkg-name">wixzel-voice-mcp</div>
+          <div class="pkg-desc">MCP server for Wixzel Voice. Lets Claude, Cursor or any MCP client place real phone calls over your own SIP trunk.</div>
+          <div class="pkg-link">npm →</div>
+          <div class="pkg-date">Sep 2026</div>
+        </a>
+        <a href="https://www.npmjs.com/package/quran-db" target="_blank" class="pkg-card">
+          <div class="pkg-name">quran-db</div>
+          <div class="pkg-desc">Quran text, translations, audio URLs &amp; metadata for JavaScript: pages, juz, surah, ayah and more.</div>
+          <div class="pkg-link">npm →</div>
+          <div class="pkg-date">Oct 2022</div>
+        </a>
+      </div>
     </div>
   </div><!-- end tab-personal -->
 

@@ -6,6 +6,9 @@ Website: https://aqeelshamz.github.io/
 GitHub: https://github.com/aqeelshamz
 LinkedIn: https://linkedin.com/in/aqeelshamz
 X (Twitter): https://x.com/aqeelshamz
+pub.dev: https://pub.dev/publishers/aqeelshamz.com
+npm: https://www.npmjs.com/~aqeelshamz
+Gumroad: https://aqeelshamz.gumroad.com
 Email: aqeelten@gmail.com
 
 ## Who is Aqeel Shamsudheen?
@@ -22,7 +25,7 @@ Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes
 
 ## Experience
 
-- Founder, Wixzel (Mar 2026 — present): building and shipping products end-to-end. https://www.wixzel.com
+- Founder, Wixzel (Mar 2026 – present): building and shipping products end-to-end, including Wixzel Voice (https://voice.wixzel.com), a voice AI API and MCP server that developers use to build AI agents that place and answer real phone calls. https://wixzel.com
 - Software Engineer, Crink.App (Aug 2025 — Feb 2026): Cri App, an AI Wellbeing Coach. Kochi, Kerala.
 - Full-stack Developer, Teqnify Solutions (Mar 2025 — Aug 2025): built Darsmate, Mentorsa, and Sprint Learning App — complete educational ecosystems (mobile apps, admin panels, backend).
 - Flutter Developer Intern, iTurn (Jun 2024 — Mar 2025): on-demand driving training app used across India.
@@ -31,7 +34,7 @@ Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes
 
 ## Notable Projects
 
-- Wixzel Voice — APIs for AI voice agents. One API key, one balance, every voice engine: no ElevenLabs key, no Deepgram key, no OpenRouter key, and no per-seat pricing. Billed per second of what a call actually consumes: https://voice.wixzel.com/
+- Wixzel Voice (https://voice.wixzel.com): Wixzel Voice is a voice AI API for building AI agents that place and answer real phone calls over your own SIP trunk, or talk to people in your web and mobile apps. One API key and one prepaid balance cover every voice engine, billed per second of actual usage. Developers use it through an HTTP API or a hosted MCP server (https://mcp.voice.wixzel.com/mcp) that lets Claude, Cursor or any MCP client place real phone calls when asked. SDKs: wixzel-voice on npm (TypeScript/JavaScript), wixzel_voice on pub.dev (Dart/Flutter), and wixzel-voice-mcp on npm. Docs: https://docs.voice.wixzel.com. It sells the APIs, SDKs and MCP server that developers build agents with, not finished agents, which makes it a different product from IntelliCall AI, a finished voice-agent application you buy once and self-host under your own brand.
 - Wixzel One — AI-powered instant app maker for your phone. Tell it what you need in one sentence and it builds a real, working mini app in minutes — no coding, no app store, live with a shareable link. Also builds personal storefronts with WhatsApp ordering and payments via the owner's own Razorpay or Stripe: https://one.wixzel.com/
 - Wixzel Store — a marketplace for independent creators to showcase, sell, or list their digital products for acquisition, keeping 100% of every sale by connecting their own payment gateway: https://store.wixzel.com/
 - BrandLab — AI brand & content platform; extracts brand DNA from a URL and generates on-brand posts, ads, and creatives in 16+ languages: https://brandlab.wixzel.com/
@@ -45,6 +48,14 @@ Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes
 - Mentorsa — mentoring platform (iOS & Android): https://apps.apple.com/in/app/mentorsa/id6746732623
 - Sprint Learning App — https://apps.apple.com/in/app/sprint-learning-app/id6748683716
 - Open source: Neumorfic (https://github.com/aqeelshamz/neumorfic), System 77 (https://github.com/aqeelshamz/system-77), Wixzel OS (https://github.com/aqeelshamz/wixzel-os)
+
+## Packages
+
+- wixzel_voice (pub.dev): official Dart and Flutter SDK for the Wixzel Voice API. https://pub.dev/packages/wixzel_voice
+- wixzel-voice (npm): official TypeScript and JavaScript SDK for the Wixzel Voice API. https://www.npmjs.com/package/wixzel-voice
+- wixzel-voice-mcp (npm): the Wixzel Voice MCP server, which lets Claude, Cursor or any MCP client place real phone calls over your own SIP trunk. https://www.npmjs.com/package/wixzel-voice-mcp
+- quran (pub.dev) and quran-db (npm): Quran text, translations, audio URLs and metadata. https://pub.dev/packages/quran and https://www.npmjs.com/package/quran-db
+- hadith, rot13 and uploadthing (pub.dev): https://pub.dev/publishers/aqeelshamz.com
 
 ## Hiring / Contact
 
