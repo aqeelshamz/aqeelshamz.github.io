@@ -1,0 +1,26 @@
+/* Wixzel UI brand palette for this site.
+   Regenerate: npx wixzel-ui --seed "#87e64c" > css/brand.css */
+:root:root {
+  --wx-color-bg: light-dark(#FBFCFA, #0C100A);
+  --wx-color-bg-subtle: light-dark(#EDF2EB, #11160E);
+  --wx-color-bg-muted: light-dark(#E2E8E0, #1F251C);
+  --wx-color-card: light-dark(#EEF3EC, #141911);
+  --wx-color-surface: light-dark(#FDFEFD, #1C231A);
+  --wx-color-surface-overlay: light-dark(#FDFEFD, #1D241A);
+  --wx-color-border: light-dark(#D8DFD5, #272E24);
+  --wx-color-border-strong: light-dark(#BCC4B8, #3E473B);
+  --wx-color-fg: light-dark(#151A13, #F2F4F1);
+  --wx-color-fg-muted: light-dark(#4E554A, #B7BDB4);
+  --wx-color-fg-subtle: light-dark(#61695D, #979E94);
+  --wx-color-fg-disabled: light-dark(#A7ADA4, #555A52);
+  --wx-color-fg-inverse: light-dark(#FBFCFA, #0C100A);
+  --wx-color-bg-inverse: light-dark(#151A13, #F2F4F1);
+  --wx-color-overlay: light-dark(#0F130D6B, #010100A0);
+  --wx-color-accent: #87e64c;
+  --wx-color-accent-hover: #94F45B;
+  --wx-color-accent-fg: #0B1109;
+  --wx-color-accent-subtle: light-dark(#D7F7C8, #182D0D);
+  --wx-color-accent-ink: light-dark(#397800, #87E64C);
+  --wx-color-accent-edge: light-dark(#4B9900, #87E64C);
+  --wx-color-focus: var(--wx-color-accent-edge);
+}

@@ -1,0 +1,48 @@
+/* The Wixzel UI base layer and entrance animations, written as plain CSS for a
+   site that has no Tailwind build. Mirrors wixzel-ui@0.1.0 dist/tailwind.css. */
+
+html {
+  font-family: var(--wx-font-sans);
+  background: var(--wx-color-bg);
+  color: var(--wx-color-fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--wx-color-accent);
+  color: var(--wx-color-accent-fg);
+}
+
+/* Focus is a solid 2px edge in the accent, never a glow. */
+:focus-visible {
+  outline: 2px solid var(--wx-color-focus);
+  outline-offset: 2px;
+}
+
+/* Squircle corners everywhere they are supported; full rounding stays a true circle. */
+@supports (corner-shape: squircle) {
+  *, ::before, ::after { corner-shape: squircle; }
+  .wx-round, .wx-round::before, .wx-round::after { corner-shape: round; }
+}
+
+/* New things sharpen out of a blur. */
+@keyframes wx-fade-in { from { opacity: 0; filter: blur(8px); } }
+@keyframes wx-pop-in  { from { opacity: 0; filter: blur(8px); transform: translateY(var(--wx-pop-y, -2px)); } }
+@keyframes wx-rise-in { from { opacity: 0; filter: blur(10px); transform: translateY(6px); } }
+
+/* A live signal: a ring that expands and fades. */
+@keyframes wx-pulse { 0% { opacity: 0.55; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(2.6); } }
+
+/* Reduced motion cuts animations to their last frame. */
+@media (prefers-reduced-motion: reduce) {
+  :where(*:not(.wx-motion-essential, .wx-motion-essential *)),
+  :where(*:not(.wx-motion-essential))::before,
+  :where(*:not(.wx-motion-essential))::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
