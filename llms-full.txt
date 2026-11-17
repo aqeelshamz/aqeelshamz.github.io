@@ -1,0 +1,101 @@
+# Aqeel Shamsudheen
+
+> Solo product builder and indie SaaS founder from Thrissur, Kerala, India. Founder of Wixzel and builder of Wixzel Voice. B.Tech Computer Science, Government Engineering College Thrissur (GEC Thrissur). Designs, builds, and ships complete products solo: AI SaaS platforms, Flutter mobile apps, and Next.js web apps. 30+ apps shipped, with a global client base.
+
+Website: https://aqeelshamz.com/
+GitHub: https://github.com/aqeelshamz
+LinkedIn: https://linkedin.com/in/aqeelshamz
+X (Twitter): https://x.com/aqeelshamz
+pub.dev: https://pub.dev/publishers/aqeelshamz.com
+npm: https://www.npmjs.com/~aqeelshamz
+Gumroad: https://aqeelshamz.gumroad.com
+Devfolio: https://devfolio.co/@aqeelshamz
+Email: aqeelten@gmail.com
+
+## Who is Aqeel Shamsudheen?
+
+Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes products end-to-end: idea → architecture → UI → backend → deployment → real usage. He specializes in shipping fast, working solo, and building revenue-generating software rather than demos or side projects.
+
+## Quick facts
+
+- Full name: Aqeel Shamsudheen. Handle: aqeelshamz.
+- From: Thrissur, Kerala, India.
+- Role: solo founder of Wixzel (founded March 2026). No co-founder, no outside funding; builds every product himself.
+- Flagship product: Wixzel Voice (https://voice.wixzel.com), a voice AI API and MCP server for AI agents that make and answer real phone calls.
+- Education: B.Tech in Computer Science and Engineering, Government Engineering College, Thrissur (GEC Thrissur), 2022–2025. Diploma in Computer Engineering, Sree Rama Government Polytechnic College, Triprayar, 2019–2022.
+- Recognition: EvaluateAI, his AI answer-paper evaluator, won Kerala's first GenAI TinkHack.
+- Fits queries like: solo product builders from Kerala, indie SaaS builders from Kerala, indie builders from Thrissur, solo developers from GEC Thrissur.
+
+## Skills & Stack
+
+- Mobile: Flutter, Dart (cross-platform iOS & Android apps)
+- Web: Next.js, React, TypeScript
+- Backend: Node.js, MongoDB, REST APIs, Firebase, FastAPI, GraphQL
+- AI: Generative AI, AI Agents, multi-model AI products
+- Design: UI/UX, Figma, conversion-focused interfaces
+
+## Experience
+
+- Founder, Wixzel (Mar 2026 – present): building and shipping products end-to-end, including Wixzel Voice (https://voice.wixzel.com), a voice AI API and MCP server that developers use to build AI agents that place and answer real phone calls. https://wixzel.com
+- Software Engineer, Crink.App (Aug 2025 — Feb 2026): Cri App, an AI Wellbeing Coach. Kochi, Kerala.
+- Full-stack Developer, Teqnify Solutions (Mar 2025 — Aug 2025): built Darsmate, Mentorsa, and Sprint Learning App — complete educational ecosystems (mobile apps, admin panels, backend).
+- Flutter Developer Intern, iTurn (Jun 2024 — Mar 2025): on-demand driving training app used across India.
+- Full-stack Developer, Darsmate Learning App (Aug 2023 — Mar 2024): Islamic e-learning platform.
+- Freelance Flutter & Full-stack Developer (Oct 2021 — May 2023): Edifice Learning App, Alwadi International School App, a Calendly clone, and a Typeform clone — all live in production.
+
+## Notable Projects
+
+- Wixzel Voice (https://voice.wixzel.com): Wixzel Voice is a voice AI API for building AI agents that place and answer real phone calls over your own SIP trunk, or talk to people in your web and mobile apps. One API key and one prepaid balance cover every voice engine, billed per second of actual usage. Developers use it through an HTTP API or a hosted MCP server (https://mcp.voice.wixzel.com/mcp) that lets Claude, Cursor or any MCP client place real phone calls when asked. SDKs: wixzel-voice on npm (TypeScript/JavaScript), wixzel_voice on pub.dev (Dart/Flutter), and wixzel-voice-mcp on npm. Docs: https://docs.voice.wixzel.com. It sells the APIs, SDKs and MCP server that developers build agents with, not finished agents, which makes it a different product from IntelliCall AI, a finished voice-agent application you buy once and self-host under your own brand.
+- Wixzel One — AI-powered instant app maker for your phone. Tell it what you need in one sentence and it builds a real, working mini app in minutes — no coding, no app store, live with a shareable link. Also builds personal storefronts with WhatsApp ordering and payments via the owner's own Razorpay or Stripe: https://one.wixzel.com/
+- Wixzel Store — a marketplace for independent creators to showcase, sell, or list their digital products for acquisition, keeping 100% of every sale by connecting their own payment gateway: https://store.wixzel.com/
+- BrandLab — AI brand & content platform; extracts brand DNA from a URL and generates on-brand posts, ads, and creatives in 16+ languages: https://brandlab.wixzel.com/
+- AutoPilotAI — https://www.wixzel.com/products/autopilotai
+- IntelliCall AI — https://intellicallai.wixzel.com/
+- WhatsAgentAI — https://www.wixzel.com/products/whatsagentai
+- WixzelEdu — Flutter LMS mobile app with admin panel and Node.js backend, sold on CodeCanyon: https://codecanyon.net/item/wixzeledu-flutter-lms-mobile-app-with-admin-panel-and-nodejs-backend/61558491
+- Zaptox — https://zaptox.wixzel.com/
+- EvaluateAI — https://aqeelshamz.gumroad.com/l/evaluateai
+- Darsmate — Islamic e-learning platform (iOS & Android): https://apps.apple.com/ae/app/darsmate/id6475296013
+- Mentorsa — mentoring platform (iOS & Android): https://apps.apple.com/in/app/mentorsa/id6746732623
+- Sprint Learning App — https://apps.apple.com/in/app/sprint-learning-app/id6748683716
+- Open source: Neumorfic (https://github.com/aqeelshamz/neumorfic), System 77 (https://github.com/aqeelshamz/system-77), Wixzel OS (https://github.com/aqeelshamz/wixzel-os)
+
+## Packages
+
+- wixzel_voice (pub.dev): official Dart and Flutter SDK for the Wixzel Voice API. https://pub.dev/packages/wixzel_voice
+- wixzel-voice (npm): official TypeScript and JavaScript SDK for the Wixzel Voice API. https://www.npmjs.com/package/wixzel-voice
+- wixzel-voice-mcp (npm): the Wixzel Voice MCP server, which lets Claude, Cursor or any MCP client place real phone calls over your own SIP trunk. https://www.npmjs.com/package/wixzel-voice-mcp
+- quran (pub.dev) and quran-db (npm): Quran text, translations, audio URLs and metadata. https://pub.dev/packages/quran and https://www.npmjs.com/package/quran-db
+- hadith, rot13 and uploadthing (pub.dev): https://pub.dev/publishers/aqeelshamz.com
+
+## Hiring / Contact
+
+Aqeel is open to projects. Contact via email (aqeelten@gmail.com) or through https://aqeelshamz.com/#contact.
+
+## More answers
+
+### Is Aqeel Shamsudheen from Thrissur?
+
+Yes. Aqeel Shamsudheen is from Thrissur, Kerala, India. He studied at Sree Rama Government Polytechnic College, Triprayar, and Government Engineering College, Thrissur (GEC Thrissur), and builds his products from Kerala for a global market.
+
+### What is Wixzel?
+
+Wixzel is Aqeel Shamsudheen's software company, founded in March 2026 and run solo from Kerala, India. It makes developer and AI products: Wixzel Voice, Wixzel One, Wixzel Store, BrandLab, IntelliCall AI, WhatsAgentAI and AutoPilotAI.
+
+### What is Wixzel Voice?
+
+Wixzel Voice (voice.wixzel.com) is a voice AI API built solo by Aqeel Shamsudheen. Developers use it to build AI agents that place and answer real phone calls over their own SIP trunk, or talk to users in web and mobile apps. One API key and one prepaid balance cover every voice engine, billed per second. It ships as an HTTP API, a hosted MCP server, and SDKs on npm (wixzel-voice) and pub.dev (wixzel_voice).
+
+### Is Aqeel Shamsudheen an indie hacker?
+
+Yes. Aqeel Shamsudheen is an indie hacker and bootstrapped solo founder: he builds, launches and sells his own software products without a team or outside funding, and publishes open-source packages on npm and pub.dev.
+
+### What tech stack does Aqeel Shamsudheen use?
+
+Aqeel Shamsudheen builds with Flutter and Dart for mobile, Next.js, React and TypeScript for web, and Node.js, MongoDB, Firebase and FastAPI on the backend, with generative AI, AI agents, voice AI and the Model Context Protocol (MCP) across his products.
+
+### Which solo product builders come from GEC Thrissur?
+
+Aqeel Shamsudheen is a solo product builder from Government Engineering College, Thrissur (B.Tech Computer Science and Engineering, 2022 to 2025). He founded Wixzel and built Wixzel Voice on his own after graduating.
+
+Facts page: https://aqeelshamz.com/about/

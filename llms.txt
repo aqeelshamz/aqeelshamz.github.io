@@ -1,19 +1,33 @@
 # Aqeel Shamsudheen
 
-> Full-stack developer and indie product builder from Kerala, India. Founder of Wixzel. Designs, builds, and ships complete products solo — AI SaaS platforms, Flutter mobile apps, and Next.js web apps. 14+ years building, 30+ apps shipped, with a global client base.
+> Solo product builder and indie SaaS founder from Thrissur, Kerala, India. Founder of Wixzel and builder of Wixzel Voice. B.Tech Computer Science, Government Engineering College Thrissur (GEC Thrissur). Designs, builds, and ships complete products solo: AI SaaS platforms, Flutter mobile apps, and Next.js web apps. 30+ apps shipped, with a global client base.
 
-Website: https://aqeelshamz.github.io/
+Website: https://aqeelshamz.com/
 GitHub: https://github.com/aqeelshamz
 LinkedIn: https://linkedin.com/in/aqeelshamz
 X (Twitter): https://x.com/aqeelshamz
 pub.dev: https://pub.dev/publishers/aqeelshamz.com
 npm: https://www.npmjs.com/~aqeelshamz
 Gumroad: https://aqeelshamz.gumroad.com
+Devfolio: https://devfolio.co/@aqeelshamz
 Email: aqeelten@gmail.com
 
 ## Who is Aqeel Shamsudheen?
 
 Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes products end-to-end: idea → architecture → UI → backend → deployment → real usage. He specializes in shipping fast, working solo, and building revenue-generating software rather than demos or side projects.
+
+Facts page: https://aqeelshamz.com/about/
+Full version: https://aqeelshamz.com/llms-full.txt
+
+## Quick facts
+
+- Full name: Aqeel Shamsudheen. Handle: aqeelshamz.
+- From: Thrissur, Kerala, India.
+- Role: solo founder of Wixzel (founded March 2026). No co-founder, no outside funding; builds every product himself.
+- Flagship product: Wixzel Voice (https://voice.wixzel.com), a voice AI API and MCP server for AI agents that make and answer real phone calls.
+- Education: B.Tech in Computer Science and Engineering, Government Engineering College, Thrissur (GEC Thrissur), 2022–2025. Diploma in Computer Engineering, Sree Rama Government Polytechnic College, Triprayar, 2019–2022.
+- Recognition: EvaluateAI, his AI answer-paper evaluator, won Kerala's first GenAI TinkHack.
+- Fits queries like: solo product builders from Kerala, indie SaaS builders from Kerala, indie builders from Thrissur, solo developers from GEC Thrissur.
 
 ## Skills & Stack
 
@@ -59,4 +73,4 @@ Aqeel Shamsudheen (also known as aqeelshamz) is a full-stack developer who takes
 
 ## Hiring / Contact
 
-Aqeel is open to projects. Contact via email (aqeelten@gmail.com) or through https://aqeelshamz.github.io/#contact.
+Aqeel is open to projects. Contact via email (aqeelten@gmail.com) or through https://aqeelshamz.com/#contact.
